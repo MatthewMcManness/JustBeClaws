@@ -1,18 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rubik&display=swap');
 
 html * {
-    font-family: 'Noto Sans', sans-serif;
+    font-family: 'Rubik', sans-serif;
     background-color: #dfe6ef;
-}
-
-nav {
-    font-weight: bold;
-    height: 50px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: #3871c1;
-    min-width: 800px;
 }
 
 ul {
@@ -48,30 +39,35 @@ li:hover {
 }
 
 
-
-div.content-basic {
+.content-basic {
+    justify-content: center;
     background-color: white;
     color: black;
-    margin: auto;
-    padding: 10px;
-    display:block;
-    overflow: auto;
-    width:80%;
-    box-shadow: #404040;
+    gap: 2%;
+    padding: 2%;
+    margin-top:2%;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    width:clamp(300px,80%,800px);
+    box-shadow: 0 3px 10px #404040;
 }
 
-div.content-emphasis {
-    background-color: #0b4d9e;
+.content-emphasis {
+    background-color: #305894;
     color: white;
-    margin: auto;
-    padding: 10px;
-    display:block;
-    overflow: auto;
-    width:60%;
-    height: relative;
-    min-width: 600px;
-    max-width: 1000px;
-    position:relative;
+    gap: 2%;
+    padding: 2%;
+    margin-top:2%;
+    margin-left:auto;
+    margin-right:auto;
+    width:clamp(300px,80%,800px);
+    box-shadow: 0 3px 10px #404040;
+}
+
+h1.content-emphasis{
+    background-color: #305894;
 }
 .incremement-animal {
     color:white;
@@ -188,7 +184,7 @@ div.content-emphasis {
 
 .donate-button {
     transition-duration: 0.4s;
-    background-color: #3871C1; 
+    background-color: #305894; 
     border-radius: 12px;
     border: 1px solid black;
     color: white;
@@ -202,7 +198,7 @@ div.content-emphasis {
     margin:3px;
   }
 .donate-button:hover {
-    background-color: #305894;
+    background-color: #026EF2;
     box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
   }
   /* Add a black background color to the top navigation */
@@ -210,12 +206,13 @@ div.content-emphasis {
     background-color:#305894;
     display: flex;
     flex-wrap: wrap;
-    gap:1%;
+    gap:0.25%;
     color: white;
     text-align: center;
-    font-size: clamp(10px, 2.5vw, 20px);
+    font-size: clamp(10px, 1.5vw, 20px);
     justify-content: center;
     text-decoration: none;
+    padding: 0.25%;
   }
   
   /* Style the links inside the navigation bar */
@@ -246,6 +243,7 @@ div.content-emphasis {
     color: white;
   }
 
+  /* Change the color of the active webpage */
   .topnav a.active{
     background-color: #f38a0a;
     border-radius: 6px;

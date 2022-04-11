@@ -8,7 +8,7 @@ class siteHeader extends HTMLElement {
                 switch(activePage){
                     case "default":
                         this.innerHTML = `
-                            <div class="background">
+                            <div>
                                 <img src="JustBeClawsHeaderImage.png" style="width:50%; height:auto; display:block; margin-left:auto; margin-right:auto"/>                        
                             </div>   
 
@@ -23,7 +23,7 @@ class siteHeader extends HTMLElement {
                     break;
                     case "home":
                         this.innerHTML = `
-                            <div class="background">
+                            <div>
                                 <img src="JustBeClawsHeaderImage.png" style="width:50%; height:auto; display:block; margin-left:auto; margin-right:auto"/>                        
                             </div>                        
                             
@@ -38,7 +38,7 @@ class siteHeader extends HTMLElement {
                     break;
                     case "animals":
                         this.innerHTML = `
-                            <div class="background">
+                            <div>
                                 <img src="JustBeClawsHeaderImage.png" style="width:50%; height:auto; display:block; margin-left:auto; margin-right:auto"/>                        
                             </div>                        
             
@@ -53,7 +53,7 @@ class siteHeader extends HTMLElement {
                     break;
                     case "donate":
                         this.innerHTML = `
-                           <div class="background">
+                           <div>
                                 <img src="JustBeClawsHeaderImage.png" style="width:50%; height:auto; display:block; margin-left:auto; margin-right:auto"/>                        
                             </div>                        
                 
@@ -68,7 +68,7 @@ class siteHeader extends HTMLElement {
                     break;
                     case "signUp":
                         this.innerHTML = `
-                            <div class="background">
+                            <div>
                                 <img src="JustBeClawsHeaderImage.png" style="width:50%; height:auto; display:block; margin-left:auto; margin-right:auto"/>                        
                             </div>                        
                 
@@ -83,7 +83,7 @@ class siteHeader extends HTMLElement {
                     break;
                     case "login":
                         this.innerHTML = `
-                           <div class="background">
+                           <div>
                                 <img src="JustBeClawsHeaderImage.png" style="width:50%; height:auto; display:block; margin-left:auto; margin-right:auto"/>                        
                             </div>                        
                 
@@ -103,7 +103,7 @@ class siteHeader extends HTMLElement {
                 switch(activePage){
                     case "default":
                         this.innerHTML = `
-                            <div class="background">
+                            <div>
                                 <img src="JustBeClawsHeaderImage.png" style="width:50%; height:auto; display:block; margin-left:auto; margin-right:auto"/>                        
                             </div>                        
                             
@@ -118,7 +118,7 @@ class siteHeader extends HTMLElement {
                     break;
                     case "home":
                         this.innerHTML = `
-                            <div class="background">
+                            <div>
                                 <img src="JustBeClawsHeaderImage.png" style="width:50%; height:auto; display:block; margin-left:auto; margin-right:auto"/>                        
                             </div>                        
                         
@@ -133,7 +133,7 @@ class siteHeader extends HTMLElement {
                     break;
                     case "animals":
                         this.innerHTML = `
-                            <div class="background">
+                            <div>
                                 <img src="JustBeClawsHeaderImage.png" style="width:50%; height:auto; display:block; margin-left:auto; margin-right:auto"/>                        
                             </div>                        
                     
@@ -148,7 +148,7 @@ class siteHeader extends HTMLElement {
                     break;
                     case "donate":
                         this.innerHTML = `
-                            <div class="background">
+                            <div>
                                 <img src="JustBeClawsHeaderImage.png" style="width:50%; height:auto; display:block; margin-left:auto; margin-right:auto"/>                        
                             </div>                        
                 
@@ -168,7 +168,7 @@ class siteHeader extends HTMLElement {
                     switch(activePage){
                         case "default":
                             this.innerHTML = `
-                                <div class="background">
+                                <div>
                                     <img src="JustBeClawsHeaderImage.png" style="width:50%; height:auto; display:block; margin-left:auto; margin-right:auto"/>                        
                                 </div>                        
                             
@@ -184,7 +184,7 @@ class siteHeader extends HTMLElement {
                         break;
                         case "home":
                             this.innerHTML = `
-                                <div class="background">
+                                <div>
                                     <img src="JustBeClawsHeaderImage.png" style="width:50%; height:auto; display:block; margin-left:auto; margin-right:auto"/>                        
                                 </div>                        
                                 
@@ -200,7 +200,7 @@ class siteHeader extends HTMLElement {
                         break;
                         case "animals":
                             this.innerHTML = `
-                                <div class="background">
+                                <div>
                                     <img src="JustBeClawsHeaderImage.png" style="width:50%; height:auto; display:block; margin-left:auto; margin-right:auto"/>                        
                                 </div>                        
                                 
@@ -216,7 +216,7 @@ class siteHeader extends HTMLElement {
                         break;
                         case "myAnimals":
                             this.innerHTML = `
-                                <div class="background">
+                                <div>
                                     <img src="JustBeClawsHeaderImage.png" style="width:50%; height:auto; display:block; margin-left:auto; margin-right:auto"/>                        
                                 </div>                        
                                 
@@ -232,7 +232,7 @@ class siteHeader extends HTMLElement {
                         break;
                         case "donate":
                             this.innerHTML = `
-                                <div class="background">
+                                <div>
                                     <img src="JustBeClawsHeaderImage.png" style="width:50%; height:auto; display:block; margin-left:auto; margin-right:auto"/>                        
                                 </div>                        
                         
@@ -253,7 +253,7 @@ class siteHeader extends HTMLElement {
                 switch(activePage){
                     case "default":
                         this.innerHTML = `
-                            <div class="background">
+                            <div>
                                 <img src="JustBeClawsHeaderImage.png" style="width:50%; height:auto; display:block; margin-left:auto; margin-right:auto"/>                             
                            </div>                        
                                
@@ -270,7 +270,7 @@ class siteHeader extends HTMLElement {
                     break;
                     case "home":
                         this.innerHTML = `
-                            <div class="background">
+                            <div>
                                 <img src="JustBeClawsHeaderImage.png" style="width:50%; height:auto; display:block; margin-left:auto; margin-right:auto"/>                        
                             </div>                        
                                 
@@ -287,7 +287,7 @@ class siteHeader extends HTMLElement {
                     break;
                     case "animals":
                         this.innerHTML = `
-                            <div class="background">
+                            <div>
                                 <img src="JustBeClawsHeaderImage.png" style="width:50%; height:auto; display:block; margin-left:auto; margin-right:auto"/>                        
                             </div>                        
                 
@@ -304,7 +304,7 @@ class siteHeader extends HTMLElement {
                     break;
                     case "fosters":
                         this.innerHTML = `
-                            <div class="background">
+                            <div>
                                 <img src="JustBeClawsHeaderImage.png" style="width:50%; height:auto; display:block; margin-left:auto; margin-right:auto"/>                        
                             </div>                        
                 
@@ -321,7 +321,7 @@ class siteHeader extends HTMLElement {
                     break;
                     case "applications":
                         this.innerHTML = `
-                            <div class="background">
+                            <div>
                                 <img src="JustBeClawsHeaderImage.png" style="width:50%; height:auto; display:block; margin-left:auto; margin-right:auto"/>                        
                             </div>                        
                 
@@ -338,7 +338,7 @@ class siteHeader extends HTMLElement {
                     break;
                     case "donate":
                         this.innerHTML = `
-                            <div class="background">
+                            <div>
                                 <img src="JustBeClawsHeaderImage.png" style="width:50%; height:auto; display:block; margin-left:auto; margin-right:auto"/>                        
                             </div>                        
                             

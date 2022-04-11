@@ -10,8 +10,8 @@ nav {
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: #3871C1;
-    min-width: 600px;
+    background-color: #3871c1;
+    min-width: 800px;
 }
 
 ul {
@@ -32,8 +32,10 @@ li a {
 }
 
 li:hover {
-    background-color: #305894;
     cursor: pointer;
+    background-color: #2b5a9b;
+    border-color: white;
+    border-style: solid 2px;
 }
 
 .title {
@@ -44,22 +46,41 @@ li:hover {
     margin-bottom: 0px;
 }
 
-div.content {
+
+
+div.content-basic {
     /*background-color: #83ace4;*/
-    background-color: #3871C1;
-    color: white;
+    border-radius: 6px;
+    background-color: #dfe6ef;
+    color: black;
     margin: auto;
-    margin-top: 10px;
+    
     padding: 10px;
     display:block;
     overflow: auto;
     width:60%;
-    height:900px;
+    height: relative;
     min-width: 600px;
     max-width: 1000px;
     position:relative;
 }
 
+div.content-emphasis {
+    /*background-color: #83ace4;*/
+    border-radius: 6px;
+    background-color: #0b4d9e;
+    color: white;
+    margin: auto;
+    
+    padding: 10px;
+    display:block;
+    overflow: auto;
+    width:60%;
+    height: relative;
+    min-width: 600px;
+    max-width: 1000px;
+    position:relative;
+}
 .incremement-animal {
     color:white;
     font-weight: bold;
@@ -186,10 +207,92 @@ div.content {
     font-size: 200%;
     width: relative;
     height: relative;
-    margin-top: 5%;
-    margin-right: 5%;
+    margin:3px;
   }
 .donate-button:hover {
     background-color: #305894;
     box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+  }
+
+  #primary{
+      width:100%
+  }
+
+  .secondary {
+      width:50%;
+  }
+
+  .leftcolumn{
+      float:left;
+      justify-content: left;
+      min-width: 700px;
+  }
+
+  .rightcolumn{
+      float:right;
+      justify-content: right;
+      min-width: 700px;
+  }
+  /* Add a black background color to the top navigation */
+.topnav {
+    background-color: white;
+    float: center;
+    color: black;
+    text-align: center;
+    padding: 14px 16px;
+    margin: 3px;
+    text-decoration: none;
+    font-size: 36px;
+    border-radius: 6px;
+ 
+  }
+  
+  /* Style the links inside the navigation bar */
+  .topnav a {
+    float: center;
+    color: black;
+    text-align: center;
+    padding: 14px 16px;
+    margin-left: 3px;
+    text-decoration: none;
+    font-size: 36px;
+    border-radius: 6px;
+  }
+  
+.topnav b {
+    float: center;
+    color: black;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 36px;
+    border-radius: 6px;
+    margin-left: 3px;
+
+  }
+  /* Change the color of links on hover */
+   .topnav a:hover {
+    background-color: #026EF2
+    ;
+    border-radius: 6px;
+    color: white;
+  }
+
+  .topnav a.active{
+    background-color: #f38a0a;
+    border-radius: 6px;
+    color: white;
+  }
+  
+
+  .HeaderImageBackground {
+  
+    background-color:#dfe6ef;
+    border-radius: 6px;
+  }
+
+  .background{
+    background-color:#dfe6ef;
+    border-radius: 6px;
+    padding: 10px;
   }

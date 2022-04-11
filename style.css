@@ -2,6 +2,7 @@
 
 html * {
     font-family: 'Noto Sans', sans-serif;
+    background-color: #dfe6ef;
 }
 
 nav {
@@ -49,29 +50,20 @@ li:hover {
 
 
 div.content-basic {
-    /*background-color: #83ace4;*/
-    border-radius: 6px;
-    background-color: #dfe6ef;
+    background-color: white;
     color: black;
     margin: auto;
-    
     padding: 10px;
     display:block;
     overflow: auto;
-    width:60%;
-    height: relative;
-    min-width: 600px;
-    max-width: 1000px;
-    position:relative;
+    width:80%;
+    box-shadow: #404040;
 }
 
 div.content-emphasis {
-    /*background-color: #83ace4;*/
-    border-radius: 6px;
     background-color: #0b4d9e;
     color: white;
     margin: auto;
-    
     padding: 10px;
     display:block;
     overflow: auto;
@@ -213,67 +205,43 @@ div.content-emphasis {
     background-color: #305894;
     box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
   }
-
-  #primary{
-      width:100%
-  }
-
-  .secondary {
-      width:50%;
-  }
-
-  .leftcolumn{
-      float:left;
-      justify-content: left;
-      min-width: 700px;
-  }
-
-  .rightcolumn{
-      float:right;
-      justify-content: right;
-      min-width: 700px;
-  }
   /* Add a black background color to the top navigation */
 .topnav {
-    background-color: white;
-    float: center;
-    color: black;
+    background-color:#305894;
+    display: flex;
+    flex-wrap: wrap;
+    gap:1%;
+    color: white;
     text-align: center;
-    padding: 14px 16px;
-    margin: 3px;
+    font-size: clamp(10px, 2.5vw, 20px);
+    justify-content: center;
     text-decoration: none;
-    font-size: 36px;
-    border-radius: 6px;
- 
   }
   
   /* Style the links inside the navigation bar */
   .topnav a {
+    background-color:#305894;
     float: center;
-    color: black;
+    color:white;
     text-align: center;
     padding: 14px 16px;
-    margin-left: 3px;
-    text-decoration: none;
-    font-size: 36px;
     border-radius: 6px;
+    text-decoration: none;
   }
   
 .topnav b {
+    background-color:#305894;
     float: center;
-    color: black;
     text-align: center;
     padding: 14px 16px;
-    text-decoration: none;
-    font-size: 36px;
     border-radius: 6px;
     margin-left: 3px;
+    text-decoration: none;
 
   }
   /* Change the color of links on hover */
    .topnav a:hover {
-    background-color: #026EF2
-    ;
+    background-color: #026EF2;
     border-radius: 6px;
     color: white;
   }
@@ -284,15 +252,3 @@ div.content-emphasis {
     color: white;
   }
   
-
-  .HeaderImageBackground {
-  
-    background-color:#dfe6ef;
-    border-radius: 6px;
-  }
-
-  .background{
-    background-color:#dfe6ef;
-    border-radius: 6px;
-    padding: 10px;
-  }

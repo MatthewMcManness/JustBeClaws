@@ -57,7 +57,8 @@ html * {
     margin: 2.5%;
     position: relative;
     border-radius: 5px;
-    color: black;
+    color:black;
+  
   }
   
   .cardPicture{
@@ -69,9 +70,18 @@ html * {
   /* On mouse-over, add a deeper shadow */
   .card:hover {
     box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
-    background-color: #026EF2;
   }
   
+  /* Add some padding inside the card container */
+  .container {
+    padding: 2%;
+    text-align: center;
+    border-radius: 0 0 5px 5px;
+  }
+
+  .container:hover{
+  }
+
 .blue{
     background-color: #305894;
     text-align: center;
@@ -273,4 +283,26 @@ html * {
     box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
     background-color: #026EF2;
   }
+
+  h4{
+      color:black;
+  }
+
+  p{
+      color:black;
+  }
   
+  .link{
+      border-radius: 0 0 5px 5px;
+  }
+
+  .link:hover{
+      background-color: #026EF2;
+  }
+
+  .link a{
+    border-radius: 0 0 5px 5px;
+      text-decoration: none;
+      font-size: clamp(8px, 1.5vw, 16px);
+  }
+

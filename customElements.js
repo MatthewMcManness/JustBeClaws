@@ -259,7 +259,7 @@ class siteHeader extends HTMLElement {
                                
                            <div class="topnav">
                                 <a  href="homePage.html">Home</a>
-                                <a  href="animalsGallery.html">Animals</a>
+                                <a  href="animal-list.html">Animals</a>
                                 <a href="foster-list.html">Fosters</a>
                                 <a href="applications.html">Application</a>
                                 <a  href="donate.html">Donate</a>
@@ -276,7 +276,7 @@ class siteHeader extends HTMLElement {
                                 
                             <div class="topnav">
                                 <a class="active" href="homePage.html">Home</a>
-                                <a  href="animalsGallery.html">Animals</a>
+                                <a  href="animal-list.html">Animals</a>
                                 <a href="foster-list.html">Fosters</a>
                                 <a href="applications.html">Application</a>
                                 <a  href="donate.html">Donate</a>
@@ -293,7 +293,7 @@ class siteHeader extends HTMLElement {
                 
                             <div class="topnav">
                                 <a href="homePage.html">Home</a>
-                                <a class="active" href="animalsGallery.html">Animals</a>
+                                <a class="active" href="animal-list.html">Animals</a>
                                 <a href="foster-list.html">Fosters</a>
                                 <a href="applications.html">Application</a>
                                 <a href="donate.html">Donate</a>
@@ -310,7 +310,7 @@ class siteHeader extends HTMLElement {
                 
                             <div class="topnav">
                                 <a href="homePage.html">Home</a>
-                                <a href="animalsGallery.html">Animals</a>
+                                <a href="animal-list.html">Animals</a>
                                 <a class="active" href="foster-list.html">Fosters</a>
                                 <a href="applications.html">Application</a>
                                 <a href="donate.html">Donate</a>
@@ -327,7 +327,7 @@ class siteHeader extends HTMLElement {
                 
                             <div class="topnav">
                                 <a href="homePage.html">Home</a>
-                                <a href="animalsGallery.html">Animals</a>
+                                <a href="animal-list.html">Animals</a>
                                 <a href="foster-list.html">Fosters</a>
                                 <a class="active" href="applications.html">Application</a>
                                 <a href="donate.html">Donate</a>
@@ -344,7 +344,7 @@ class siteHeader extends HTMLElement {
                             
                             <div class="topnav">
                                 <a href="homePage.html">Home</a>
-                                <a  href="animalsGallery.html">Animals</a>
+                                <a  href="animal-list.html">Animals</a>
                                 <a href="foster-list.html">Fosters</a>
                                 <a href="applications.html">Application</a>
                                 <a class="active" href="donate.html">Donate</a>

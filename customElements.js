@@ -17,6 +17,9 @@ class siteHeader extends HTMLElement {
                                 <a href="javascript:void(0);" class="icon" onclick="myFunction()">
                                 <i class="fa fa-bars"></i>
                               </a>
+                                <div class="bannerContainer">
+                                     <img src="JustBeClawsHeaderImage.png" alt="JustBeClaws" class="bannerImage"/>                        
+                                </div>  
                             </div>
                         `;
                     break;
@@ -32,6 +35,9 @@ class siteHeader extends HTMLElement {
                                 <a href="javascript:void(0);" class="icon" onclick="myFunction()">
                                 <i class="fa fa-bars"></i>
                               </a>
+                                <div class="bannerContainer">
+                                     <img src="JustBeClawsHeaderImage.png" alt="JustBeClaws" class="bannerImage"/>                        
+                                </div>  
                             </div>
                         `;
                     break;
@@ -46,6 +52,9 @@ class siteHeader extends HTMLElement {
                                 <a href="javascript:void(0);" class="icon" onclick="myFunction()">
                                 <i class="fa fa-bars"></i>
                               </a>
+                                <div class="bannerContainer">
+                                     <img src="JustBeClawsHeaderImage.png" alt="JustBeClaws" class="bannerImage"/>                        
+                                </div>  
                             </div>
                         `;
                     break;
@@ -61,6 +70,9 @@ class siteHeader extends HTMLElement {
                                 <a href="javascript:void(0);" class="icon" onclick="myFunction()">
                                 <i class="fa fa-bars"></i>
                               </a>
+                                <div class="bannerContainer">
+                                     <img src="JustBeClawsHeaderImage.png" alt="JustBeClaws" class="bannerImage"/>                        
+                                </div>  
                             </div>
                         `;
                     break;
@@ -76,6 +88,9 @@ class siteHeader extends HTMLElement {
                                 <a href="javascript:void(0);" class="icon" onclick="myFunction()">
                                 <i class="fa fa-bars"></i>
                               </a>
+                                <div class="bannerContainer">
+                                     <img src="JustBeClawsHeaderImage.png" alt="JustBeClaws" class="bannerImage"/>                        
+                                </div>  
                             </div>
                         `;
                     break;
@@ -108,6 +123,9 @@ class siteHeader extends HTMLElement {
                                 <a href="javascript:void(0);" class="icon" onclick="myFunction()">
                                 <i class="fa fa-bars"></i>
                               </a>
+                                <div class="bannerContainer">
+                                     <img src="JustBeClawsHeaderImage.png" alt="JustBeClaws" class="bannerImage"/>                        
+                                </div>  
                             </div>
                          `;
                     break;
@@ -123,6 +141,9 @@ class siteHeader extends HTMLElement {
                                 <a href="javascript:void(0);" class="icon" onclick="myFunction()">
                                 <i class="fa fa-bars"></i>
                               </a>
+                                <div class="bannerContainer">
+                                     <img src="JustBeClawsHeaderImage.png" alt="JustBeClaws" class="bannerImage"/>                        
+                                </div>  
                             </div>
                         `;
                     break;
@@ -138,6 +159,9 @@ class siteHeader extends HTMLElement {
                                 <a href="javascript:void(0);" class="icon" onclick="myFunction()">
                                 <i class="fa fa-bars"></i>
                               </a>
+                                <div class="bannerContainer">
+                                     <img src="JustBeClawsHeaderImage.png" alt="JustBeClaws" class="bannerImage"/>                        
+                                </div>  
                             </div>
                         `;
                     break;
@@ -153,6 +177,9 @@ class siteHeader extends HTMLElement {
                                 <a href="javascript:void(0);" class="icon" onclick="myFunction()">
                                 <i class="fa fa-bars"></i>
                               </a>
+                                <div class="bannerContainer">
+                                     <img src="JustBeClawsHeaderImage.png" alt="JustBeClaws" class="bannerImage"/>                        
+                                </div>  
                             </div>
                         `;
                     break;
@@ -174,6 +201,9 @@ class siteHeader extends HTMLElement {
                                     <a href="javascript:void(0);" class="icon" onclick="myFunction()">
                                 <i class="fa fa-bars"></i>
                               </a>
+                                <div class="bannerContainer">
+                                     <img src="JustBeClawsHeaderImage.png" alt="JustBeClaws" class="bannerImage"/>                        
+                                </div>  
                                 </div>
                             `;
                         break;
@@ -190,6 +220,9 @@ class siteHeader extends HTMLElement {
                                     <a href="javascript:void(0);" class="icon" onclick="myFunction()">
                                 <i class="fa fa-bars"></i>
                               </a>
+                                <div class="bannerContainer">
+                                     <img src="JustBeClawsHeaderImage.png" alt="JustBeClaws" class="bannerImage"/>                        
+                                </div>  
                                 </div>
                             `;
                         break;
@@ -206,6 +239,9 @@ class siteHeader extends HTMLElement {
                                     <a href="javascript:void(0);" class="icon" onclick="myFunction()">
                                 <i class="fa fa-bars"></i>
                               </a>
+                                <div class="bannerContainer">
+                                     <img src="JustBeClawsHeaderImage.png" alt="JustBeClaws" class="bannerImage"/>                        
+                                </div>  
                                 </div>
                             `;
                         break;
@@ -222,6 +258,9 @@ class siteHeader extends HTMLElement {
                                     <a href="javascript:void(0);" class="icon" onclick="myFunction()">
                                 <i class="fa fa-bars"></i>
                               </a>
+                                <div class="bannerContainer">
+                                     <img src="JustBeClawsHeaderImage.png" alt="JustBeClaws" class="bannerImage"/>                        
+                                </div>  
                                 </div>
                             `;
                         break;
@@ -238,6 +277,9 @@ class siteHeader extends HTMLElement {
                                     <a href="javascript:void(0);" class="icon" onclick="myFunction()">
                                 <i class="fa fa-bars"></i>
                               </a>
+                                <div class="bannerContainer">
+                                     <img src="JustBeClawsHeaderImage.png" alt="JustBeClaws" class="bannerImage"/>                        
+                                </div>  
                                 </div>
                             `;
                         break;
@@ -263,6 +305,9 @@ class siteHeader extends HTMLElement {
                                 <a href="javascript:void(0);" class="icon" onclick="myFunction()">
                                 <i class="fa fa-bars"></i>
                               </a>
+                                <div class="bannerContainer">
+                                     <img src="JustBeClawsHeaderImage.png" alt="JustBeClaws" class="bannerImage"/>                        
+                                </div>   
                             </div>
                         `;
                     break;
@@ -278,8 +323,12 @@ class siteHeader extends HTMLElement {
                                 <b>Signed in as Administrator</b>
                                 <a  href="homePage.html">Logout</a>
                                 <a href="javascript:void(0);" class="icon" onclick="myFunction()">
-                                <i class="fa fa-bars"></i>
-                              </a>
+                                    <i class="fa fa-bars"></i>
+                                </a>
+                                <div class="bannerContainer">
+                                     <img src="JustBeClawsHeaderImage.png" alt="JustBeClaws" class="bannerImage"/>                        
+                                </div>  
+
                             </div>
                         `;
                     break;
@@ -297,6 +346,9 @@ class siteHeader extends HTMLElement {
                                 <a href="javascript:void(0);" class="icon" onclick="myFunction()">
                                 <i class="fa fa-bars"></i>
                               </a>
+                                <div class="bannerContainer">
+                                     <img src="JustBeClawsHeaderImage.png" alt="JustBeClaws" class="bannerImage"/>                        
+                                </div>  
                             </div>
                         `;
                     break;
@@ -314,6 +366,9 @@ class siteHeader extends HTMLElement {
                                 <a href="javascript:void(0);" class="icon" onclick="myFunction()">
                                 <i class="fa fa-bars"></i>
                               </a>
+                                <div class="bannerContainer">
+                                     <img src="JustBeClawsHeaderImage.png" alt="JustBeClaws" class="bannerImage"/>                        
+                                </div>  
                             </div>
                         `;
                     break;
@@ -331,6 +386,9 @@ class siteHeader extends HTMLElement {
                                 <a href="javascript:void(0);" class="icon" onclick="myFunction()">
                                 <i class="fa fa-bars"></i>
                               </a>
+                                <div class="bannerContainer">
+                                     <img src="JustBeClawsHeaderImage.png" alt="JustBeClaws" class="bannerImage"/>                        
+                                </div>  
                             </div>
                         `;
                     break;
@@ -348,6 +406,9 @@ class siteHeader extends HTMLElement {
                                 <a href="javascript:void(0);" class="icon" onclick="myFunction()">
                                 <i class="fa fa-bars"></i>
                               </a>
+                                <div class="bannerContainer">
+                                     <img src="JustBeClawsHeaderImage.png" alt="JustBeClaws" class="bannerImage"/>                        
+                                </div>  
                             </div>
                         `;
                     break;

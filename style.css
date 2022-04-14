@@ -221,6 +221,8 @@ html * {
 .topnav {
     background-color: #305894;
     overflow: hidden;
+    width:clamp(300px,100%,1000px);
+    margin: auto;
   }
   
   /* Style the links inside the navigation bar */
@@ -299,14 +301,12 @@ html * {
   }
 
   .bannerContainer{
-      width:96%;
-      background-color: #305894;
-      box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-      margin-bottom: 1%;
-      display: flex;
-      padding: 2%;
-      margin-left: auto;
-      margin-right: auto;
+    width:clamp(300px,100%,900px);
+    margin: auto;
+    background-color: #305894;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    display: flex;
+    padding: 2%
   }
 
   .bannerImage{
@@ -321,7 +321,7 @@ html * {
       background-color: #305894;
   }
 
-  @media screen and (max-width: 600px) {
+  @media screen and (max-width: 900px) {
     .topnav a:not(:first-child) {display: none;}
     .topnav a.icon {
       float: right;
@@ -329,7 +329,7 @@ html * {
     }
   }
 
-  @media screen and (max-width: 600px) {
+  @media screen and (max-width: 900px) {
     .topnav.responsive {position: relative;}
     .topnav.responsive a.icon {
       position: absolute;

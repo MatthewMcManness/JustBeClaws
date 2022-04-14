@@ -8,90 +8,85 @@ class siteHeader extends HTMLElement {
                 switch(activePage){
                     case "default":
                         this.innerHTML = `
-                            <div>
-                                <img src="JustBeClawsHeaderImage.png" style="width:50%; height:auto; display:block; margin-left:auto; margin-right:auto"/>                        
-                            </div>   
-
-                            <div class="topnav">
+                            <div class="topnav" id="myTopnav">
                                 <a  href="homePage.html">Home</a>
                                 <a  href="animalsGallery.html">Animals</a>
                                 <a  href="donate.html">Donate</a>
-                                <a  href="signUp.html">Sign Up</a>
-                                <a  href="login.html">Login</a>
+                                <a>Sign Up</a>
+                                <a>Login</a>
+                                <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                                <i class="fa fa-bars"></i>
+                              </a>
                             </div>
                         `;
                     break;
                     case "home":
                         this.innerHTML = `
-                            <div>
-                                <img src="JustBeClawsHeaderImage.png" style="width:50%; height:auto; display:block; margin-left:auto; margin-right:auto"/>                        
-                            </div>                        
-                            
-                            <div class="topnav">
+             
+                            <div class="topnav" id="myTopnav">
                                 <a class="active" href="homePage.html">Home</a>
                                 <a  href="animalsGallery.html">Animals</a>
                                 <a  href="donate.html">Donate</a>
-                                <a  href="signUp.html">Sign Up</a>
-                                <a  href="login.html">Login</a>
+                                <a>Sign Up</a>
+                                <a>Login</a>
+                                <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                                <i class="fa fa-bars"></i>
+                              </a>
                             </div>
                         `;
                     break;
                     case "animals":
                         this.innerHTML = `
-                            <div>
-                                <img src="JustBeClawsHeaderImage.png" style="width:50%; height:auto; display:block; margin-left:auto; margin-right:auto"/>                        
-                            </div>                        
-            
-                            <div class="topnav">
+                            <div class="topnav" id="myTopnav">
                                 <a href="homePage.html">Home</a>
                                 <a class="active" href="animalsGallery.html">Animals</a>
                                 <a  href="donate.html">Donate</a>
-                                <a  href="signUp.html">Sign Up</a>
-                                <a  href="login.html">Login</a>
+                                <a>Sign Up</a>
+                                <a>Login</a>
+                                <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                                <i class="fa fa-bars"></i>
+                              </a>
                             </div>
                         `;
                     break;
                     case "donate":
                         this.innerHTML = `
-                           <div>
-                                <img src="JustBeClawsHeaderImage.png" style="width:50%; height:auto; display:block; margin-left:auto; margin-right:auto"/>                        
-                            </div>                        
-                
-                            <div class="topnav">
+
+                            <div class="topnav" id="myTopnav">
                                 <a href="homePage.html">Home</a>
                                 <a  href="animalsGallery.html">Animals</a>
                                 <a class="active" href="donate.html">Donate</a>
-                                <a  href="signUp.html">Sign Up</a>
-                                <a  href="login.html">Login</a>
+                                <a>Sign Up</a>
+                                <a>Login</a>
+                                <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                                <i class="fa fa-bars"></i>
+                              </a>
                             </div>
                         `;
                     break;
                     case "signUp":
                         this.innerHTML = `
-                            <div>
-                                <img src="JustBeClawsHeaderImage.png" style="width:50%; height:auto; display:block; margin-left:auto; margin-right:auto"/>                        
-                            </div>                        
-                
-                            <div class="topnav">
+ 
+                            <div class="topnav" id="myTopnav">
                                 <a href="homePage.html">Home</a>
                                 <a  href="animalsGallery.html">Animals</a>
                                 <a  href="donate.html">Donate</a>
-                                <a class="active" href="signUp.html">Sign Up</a>
-                                <a  href="login.html">Login</a>
+                                <a class="active>Sign Up</a>
+                                <a>Login</a>
+                                <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                                <i class="fa fa-bars"></i>
+                              </a>
                             </div>
                         `;
                     break;
                     case "login":
                         this.innerHTML = `
-                           <div>
-                                <img src="JustBeClawsHeaderImage.png" style="width:50%; height:auto; display:block; margin-left:auto; margin-right:auto"/>                        
-                            </div>                        
-                
-                            <div class="topnav">
+
+                            <div class="topnav" id="myTopnav">
                                 <a href="homePage.html">Home</a>
                                 <a  href="animalsGallery.html">Animals</a>
                                 <a  href="donate.html">Donate</a>
-                                <a  href="signUp.html">Sign Up</a>
+                                <a>Sign Up</a>
                                 <a class="active" href="login.html">Login</a>
                             </div>
                         `;
@@ -103,61 +98,61 @@ class siteHeader extends HTMLElement {
                 switch(activePage){
                     case "default":
                         this.innerHTML = `
-                            <div>
-                                <img src="JustBeClawsHeaderImage.png" style="width:50%; height:auto; display:block; margin-left:auto; margin-right:auto"/>                        
-                            </div>                        
-                            
-                            <div class="topnav">
+             
+                            <div class="topnav" id="myTopnav">
                                 <a  href="homePage.html">Home</a>
                                 <a  href="animalsGallery.html">Animals</a>
                                 <a  href="donate.html">Donate</a>
                                 <b>Signed in as Adopter</b>
                                 <a  href="homePage.html">Logout</a>
+                                <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                                <i class="fa fa-bars"></i>
+                              </a>
                             </div>
                          `;
                     break;
                     case "home":
                         this.innerHTML = `
-                            <div>
-                                <img src="JustBeClawsHeaderImage.png" style="width:50%; height:auto; display:block; margin-left:auto; margin-right:auto"/>                        
-                            </div>                        
-                        
-                            <div class="topnav">
+         
+                            <div class="topnav" id="myTopnav">
                                 <a class="active" href="homePage.html">Home</a>
                                 <a  href="animalsGallery.html">Animals</a>
                                 <a  href="donate.html">Donate</a>
                                 <b>Signed in as Adopter</b>
                                 <a  href="homePage.html">Logout</a>
+                                <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                                <i class="fa fa-bars"></i>
+                              </a>
                             </div>
                         `;
                     break;
                     case "animals":
                         this.innerHTML = `
-                            <div>
-                                <img src="JustBeClawsHeaderImage.png" style="width:50%; height:auto; display:block; margin-left:auto; margin-right:auto"/>                        
-                            </div>                        
-                    
-                            <div class="topnav">
+     
+                            <div class="topnav" id="myTopnav">
                                 <a href="homePage.html">Home</a>
                                 <a class="active" href="animalsGallery.html">Animals</a>
                                 <a  href="donate.html">Donate</a>
                                 <b>Signed in as Adopter</b>
                                 <a  href="homePage.html">Logout</a>
+                                <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                                <i class="fa fa-bars"></i>
+                              </a>
                             </div>
                         `;
                     break;
                     case "donate":
                         this.innerHTML = `
-                            <div>
-                                <img src="JustBeClawsHeaderImage.png" style="width:50%; height:auto; display:block; margin-left:auto; margin-right:auto"/>                        
-                            </div>                        
-                
-                            <div class="topnav">
+ 
+                            <div class="topnav" id="myTopnav">
                                 <a href="homePage.html">Home</a>
                                 <a  href="animalsGallery.html">Animals</a>
                                 <a class="active" href="donate.html">Donate</a>
                                 <b>Signed in as Adopter</b>
                                 <a  href="homePage.html">Logout</a>
+                                <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                                <i class="fa fa-bars"></i>
+                              </a>
                             </div>
                         `;
                     break;
@@ -167,82 +162,82 @@ class siteHeader extends HTMLElement {
                     //foster
                     switch(activePage){
                         case "default":
-                            this.innerHTML = `
-                                <div>
-                                    <img src="JustBeClawsHeaderImage.png" style="width:50%; height:auto; display:block; margin-left:auto; margin-right:auto"/>                        
-                                </div>                        
+                            this.innerHTML = `                  
                             
-                                <div class="topnav">
+                                <div class="topnav" id="myTopnav">
                                     <a  href="homePage.html">Home</a>
                                     <a  href="animalsGallery.html">All Animals</a>
                                     <a href="myAnimalsGallery.html">My Animals</a>
                                     <a  href="donate.html">Donate</a>
                                     <b>Signed in as Foster</b>
                                     <a  href="homePage.html">Logout</a>
+                                    <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                                <i class="fa fa-bars"></i>
+                              </a>
                                 </div>
                             `;
                         break;
                         case "home":
-                            this.innerHTML = `
-                                <div>
-                                    <img src="JustBeClawsHeaderImage.png" style="width:50%; height:auto; display:block; margin-left:auto; margin-right:auto"/>                        
-                                </div>                        
+                            this.innerHTML = `                  
                                 
-                                <div class="topnav">
+                                <div class="topnav" id="myTopnav">
                                     <a class="active" href="homePage.html">Home</a>
                                     <a  href="animalsGallery.html">All Animals</a>
                                     <a href="myAnimalsGallery.html">My Animals</a>
                                     <a  href="donate.html">Donate</a>
                                     <b>Signed in as Foster</b>
                                     <a  href="homePage.html">Logout</a>
+                                    <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                                <i class="fa fa-bars"></i>
+                              </a>
                                 </div>
                             `;
                         break;
                         case "animals":
-                            this.innerHTML = `
-                                <div>
-                                    <img src="JustBeClawsHeaderImage.png" style="width:50%; height:auto; display:block; margin-left:auto; margin-right:auto"/>                        
-                                </div>                        
+                            this.innerHTML = `                  
                                 
-                                <div class="topnav">
+                                <div class="topnav" id="myTopnav">
                                     <a href="homePage.html">Home</a>
                                     <a class="active" href="animalsGallery.html">All Animals</a>
                                     <a href="myAnimalsGallery.html">My Animals</a>
                                     <a  href="donate.html">Donate</a>
                                     <b>Signed in as Foster</b>
                                     <a  href="homePage.html">Logout</a>
+                                    <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                                <i class="fa fa-bars"></i>
+                              </a>
                                 </div>
                             `;
                         break;
                         case "myAnimals":
-                            this.innerHTML = `
-                                <div>
-                                    <img src="JustBeClawsHeaderImage.png" style="width:50%; height:auto; display:block; margin-left:auto; margin-right:auto"/>                        
-                                </div>                        
+                            this.innerHTML = `                  
                                 
-                                <div class="topnav">
+                                <div class="topnav" id="myTopnav">
                                     <a href="homePage.html">Home</a>
                                     <a href="animalsGallery.html">All Animals</a>
                                     <a class="active" href="myAnimalsGallery.html">My Animals</a>
                                     <a  href="donate.html">Donate</a>
                                     <b>Signed in as Foster</b>
                                     <a  href="homePage.html">Logout</a>
+                                    <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                                <i class="fa fa-bars"></i>
+                              </a>
                                 </div>
                             `;
                         break;
                         case "donate":
-                            this.innerHTML = `
-                                <div>
-                                    <img src="JustBeClawsHeaderImage.png" style="width:50%; height:auto; display:block; margin-left:auto; margin-right:auto"/>                        
-                                </div>                        
+                            this.innerHTML = `                  
                         
-                                <div class="topnav">
+                                <div class="topnav" id="myTopnav">
                                     <a href="homePage.html">Home</a>
                                     <a  href="animalsGallery.html">All Animals</a>
                                     <a href="myAnimalsGallery.html">My Animals</a>
                                     <a class="active" href="donate.html">Donate</a>
                                     <b>Signed in as Foster</b>
                                     <a  href="homePage.html">Logout</a>
+                                    <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                                <i class="fa fa-bars"></i>
+                              </a>
                                 </div>
                             `;
                         break;
@@ -257,7 +252,7 @@ class siteHeader extends HTMLElement {
                                 <img src="JustBeClawsHeaderImage.png" style="width:50%; height:auto; display:block; margin-left:auto; margin-right:auto"/>                             
                            </div>                        
                                
-                           <div class="topnav">
+                           <div class="topnav" id="myTopnav">
                                 <a  href="homePage.html">Home</a>
                                 <a  href="animal-list.html">Animals</a>
                                 <a href="foster-list.html">Fosters</a>
@@ -265,16 +260,16 @@ class siteHeader extends HTMLElement {
                                 <a  href="donate.html">Donate</a>
                                 <b>Signed in as Administrator</b>
                                 <a  href="homePage.html">Logout</a>
+                                <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                                <i class="fa fa-bars"></i>
+                              </a>
                             </div>
                         `;
                     break;
                     case "home":
                         this.innerHTML = `
-                            <div>
-                                <img src="JustBeClawsHeaderImage.png" style="width:50%; height:auto; display:block; margin-left:auto; margin-right:auto"/>                        
-                            </div>                        
-                                
-                            <div class="topnav">
+                 
+                            <div class="topnav" id="myTopnav">
                                 <a class="active" href="homePage.html">Home</a>
                                 <a  href="animal-list.html">Animals</a>
                                 <a href="foster-list.html">Fosters</a>
@@ -282,16 +277,16 @@ class siteHeader extends HTMLElement {
                                 <a  href="donate.html">Donate</a>
                                 <b>Signed in as Administrator</b>
                                 <a  href="homePage.html">Logout</a>
+                                <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                                <i class="fa fa-bars"></i>
+                              </a>
                             </div>
                         `;
                     break;
                     case "animals":
                         this.innerHTML = `
-                            <div>
-                                <img src="JustBeClawsHeaderImage.png" style="width:50%; height:auto; display:block; margin-left:auto; margin-right:auto"/>                        
-                            </div>                        
-                
-                            <div class="topnav">
+ 
+                            <div class="topnav" id="myTopnav">
                                 <a href="homePage.html">Home</a>
                                 <a class="active" href="animal-list.html">Animals</a>
                                 <a href="foster-list.html">Fosters</a>
@@ -299,16 +294,16 @@ class siteHeader extends HTMLElement {
                                 <a href="donate.html">Donate</a>
                                 <b>Signed in as Administrator</b>
                                 <a href="homePage.html">Logout</a>
+                                <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                                <i class="fa fa-bars"></i>
+                              </a>
                             </div>
                         `;
                     break;
                     case "fosters":
                         this.innerHTML = `
-                            <div>
-                                <img src="JustBeClawsHeaderImage.png" style="width:50%; height:auto; display:block; margin-left:auto; margin-right:auto"/>                        
-                            </div>                        
-                
-                            <div class="topnav">
+ 
+                            <div class="topnav" id="myTopnav">
                                 <a href="homePage.html">Home</a>
                                 <a href="animal-list.html">Animals</a>
                                 <a class="active" href="foster-list.html">Fosters</a>
@@ -316,16 +311,16 @@ class siteHeader extends HTMLElement {
                                 <a href="donate.html">Donate</a>
                                 <b>Signed in as Administrator</b>
                                 <a href="homePage.html">Logout</a>
+                                <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                                <i class="fa fa-bars"></i>
+                              </a>
                             </div>
                         `;
                     break;
                     case "applications":
                         this.innerHTML = `
-                            <div>
-                                <img src="JustBeClawsHeaderImage.png" style="width:50%; height:auto; display:block; margin-left:auto; margin-right:auto"/>                        
-                            </div>                        
-                
-                            <div class="topnav">
+ 
+                            <div class="topnav" id="myTopnav">
                                 <a href="homePage.html">Home</a>
                                 <a href="animal-list.html">Animals</a>
                                 <a href="foster-list.html">Fosters</a>
@@ -333,16 +328,16 @@ class siteHeader extends HTMLElement {
                                 <a href="donate.html">Donate</a>
                                 <b>Signed in as Administrator</b>
                                 <a href="homePage.html">Logout</a>
+                                <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                                <i class="fa fa-bars"></i>
+                              </a>
                             </div>
                         `;
                     break;
                     case "donate":
                         this.innerHTML = `
-                            <div>
-                                <img src="JustBeClawsHeaderImage.png" style="width:50%; height:auto; display:block; margin-left:auto; margin-right:auto"/>                        
-                            </div>                        
-                            
-                            <div class="topnav">
+             
+                            <div class="topnav" id="myTopnav">
                                 <a href="homePage.html">Home</a>
                                 <a  href="animal-list.html">Animals</a>
                                 <a href="foster-list.html">Fosters</a>
@@ -350,6 +345,9 @@ class siteHeader extends HTMLElement {
                                 <a class="active" href="donate.html">Donate</a>
                                 <b>Signed in as Administrator</b>
                                 <a  href="homePage.html">Logout</a>
+                                <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                                <i class="fa fa-bars"></i>
+                              </a>
                             </div>
                         `;
                     break;

@@ -159,6 +159,7 @@ html * {
     border-radius: 5px;
     color:black;
     font-size: clamp(12px, 1.5vw, 30px);
+    align-self: center;
   }
 
   

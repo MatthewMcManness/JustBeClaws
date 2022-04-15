@@ -25,48 +25,26 @@
        <site-header></site-header>
     </header>
     <body>
-        <div class="background">
-            <div class="content-emphasis">
-                <h1 style="margin-left:30px; margin-bottom: 0px">Foster Information</h1>
-                <div class="animal-main">
-                    <img id="animal-image" src="foster-placeholder.jpg">
-                </div>
-                <div id="info-div" class="animal-info" >     
-                    <div id="info-label-div" style="float: left; margin-left: 5px">
-                        <label for="foster-name-form"></label><input id="foster-name-form" type="text"></input><br><br>
-                        <label for="foster-id-form"></label><input id="foster-id-form" type="text"></input><br><br>
-                        <label for="foster-level-form"></label><input id="foster-level-form" type="text"></input><br><br>
-                        <label for="birth-date-form"></label><input id="foster-birth-date-form" type="text"></input><br><br>
-                        <label for="address-form"></label><input id="foster-address-form" type="text"></input><br><br>
-                        <div id="button-div">
-                            <button id="edit-btn" onclick="editButtonHandler()">Edit</button>
-                            <input id="image-uploader" type="file" name="images" accept="image/*" style="display:none"></input>
-                            <button id="clear-btn" onclick="clearSelection()" style="float:right; display:none">Clear</button>
-                        </div>
-
-                    </div>                
-                </div>
-                <div id="animals-div">
-                    <h2 style="margin-left:30px; margin-bottom: 0px">Adopted Animals</h2>
-                    <nav style="display:inline">  
-                        <ul>
-                            <li style="margin-left:30px"><a href="animal-admin.html">Placeholder 1: Cat, 7yo</a></li>
-                            <li style="margin-left:30px"><a href="animal-admin.html">Placeholder 2: Dog, 9yo</a></li>
-                            <li style="margin-left:30px"><a href="animal-admin.html">Placeholder 3: Dog, 4yo</a></li>
-                        </ul>
-                    </nav>
-                </div>
-                <br>
-                <br>
-                <div class="incremement-animal" style="position:absolute; bottom:4%">
-                    <div id="previous-foster" style="display:inline-block">
-                        <ul><li><a>Previous Foster</a></li></ul>
-                    </div>
-                    <div id="next-foster" style="float:right">
-                        <ul><li><a>Next Foster</a></li></ul>
-                    </div>
+        <div class="primary">
+            <div class="left">
+                <div class="slidebox">
+                    <img src="Foster.jpg" class="mySlides">
                 </div>
             </div>
+            <div class="right">
+                <div class="catInfoBox">
+                    Name: Matthew McManness
+                    <br>
+                    Foster Level: Level 3
+                    <br>
+                    Special Certifications: Manx, Medical, Tubefeeding
+                    <br>
+                    Current Number of Fosters: 18
+
+                    <div class="adoptbutton">Assign Cat</div>
+                    <div class="adoptbutton">Change Foster Level</div>
+                </div>
+            </div>           
         </div>
             <script src="foster.js" type="text/javascript" language="javascript"></script>
         

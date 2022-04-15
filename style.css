@@ -14,7 +14,7 @@ html * {
     .topnav {
       background-color: #305894;
       overflow: hidden;
-      width:clamp(300px,100%,1000px);
+      width:clamp(300px,100%,1500px);
       margin: auto;
       box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
     }
@@ -92,7 +92,7 @@ html * {
     /* end of Navigation Bar Responsivness */
 
     .bannerContainer{
-      width:clamp(300px,100%,1000px);
+      width:clamp(300px,100%,1500px);
       margin: auto;
       background-color: #305894;
       box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
@@ -108,18 +108,20 @@ html * {
 
     
 .content-basic {
-    justify-content: center;
-    background-color: white;
-    color: black;
-    gap: 2%;
-    padding: 2%;
-    margin-top:2%;
-    align-items: center;
-    margin-left: auto;
-    margin-right: auto;
-    display: flex;
-    width:clamp(300px,90%,800px);
-    box-shadow: 0 3px 10px #404040;
+  background-color: white;
+  color: black;
+  padding-top: 2%;
+  padding-bottom: 2%;
+  margin-top:2%;
+  margin-bottom: 2%;
+  margin-left:auto;
+  margin-right:auto;
+  width:clamp(300px,100%,1500px);
+  box-shadow: 0 3px 10px #404040;
+  justify-content: center;
+  text-align: center;
+  text-decoration: none;
+  display:  flex;
 }
 
 .content-emphasis {
@@ -131,7 +133,7 @@ html * {
     margin-bottom: 2%;
     margin-left:auto;
     margin-right:auto;
-    width:clamp(300px,100%,1000px);
+    width:clamp(300px,100%,1500px);
     box-shadow: 0 3px 10px #404040;
     justify-content: center;
     text-align: center;
@@ -351,11 +353,27 @@ h1{
     margin-bottom: 2%;
     margin-left:auto;
     margin-right:auto;
-    width:clamp(300px,100%,1000px);
+    width:clamp(300px,100%,1500px);
     box-shadow: 0 3px 10px #404040;
     justify-content: center;
     text-align: center;
     display: flex;
+}
+.primary-basic {
+  background-color: white;
+  color: black;
+  padding-top: 2%;
+  padding-bottom: 2%;
+  margin-top:2%;
+  margin-bottom: 2%;
+  margin-left:auto;
+  margin-right:auto;
+  width:clamp(300px,100%,1500px);
+  box-shadow: 0 3px 10px #404040;
+  justify-content: center;
+  text-align: center;
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .left{
@@ -364,11 +382,24 @@ h1{
   background-color: #305894;
 }
 
+.left-basic{
+  display:flex;
+  width:50%;
+  background-color: white;
+  margin: 2%;
+}
 .right{
   color:black;
   width:50%;
   background-color: #305894;
 }
+
+.pic-basic{
+  display: flex;
+  width: 26%;
+}
+
+
 
 .slidebox{
   width:90%;
@@ -441,4 +472,46 @@ h1{
 
 .content-emphasis a{
   background-color: #305894;
+}
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content/Box */
+.modal-content {
+  background-color: #fefefe;
+  margin: 15% auto; /* 15% from the top and centered */
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%; /* Could be more or less, depending on screen size */
+}
+
+/* The Close Button */
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.pic{
+  width: 100%;
 }

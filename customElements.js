@@ -12,8 +12,12 @@ class siteHeader extends HTMLElement {
                                 <a  href="homePage.html">Home</a>
                                 <a  href="animalsGallery.html">Animals</a>
                                 <a  href="donate.html">Donate</a>
-                                <a>Sign Up</a>
-                                <a>Login</a>
+                                <a id="signUpModal" class="modal">Sign Up</a>
+                                <a id="loginModal" class="modal">Login</a>
+                                    <div class="modal-content">
+                                        <span class="close">&times;</span>
+                                        <p>Some text in the Modal..</p>
+                                    </div>
                                 <a href="javascript:void(0);" class="icon" onclick="myFunction()">
                                 <i class="fa fa-bars"></i>
                               </a>

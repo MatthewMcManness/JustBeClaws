@@ -335,4 +335,79 @@ h1{
     background-color: #026EF2;
   }
 
+  .primary {
+    background-color: #305894;
+    color: white;
+    padding-top: 2%;
+    padding-bottom: 2%;
+    margin-top:2%;
+    margin-bottom: 2%;
+    margin-left:auto;
+    margin-right:auto;
+    width:clamp(300px,100%,1000px);
+    box-shadow: 0 3px 10px #404040;
+    justify-content: center;
+    text-align: center;
+    display: flex;
+}
+
+.left{
+
+  width:50%;
+  background-color: #305894;
+}
+
+.right{
+  color:black;
+  width:50%;
+  background-color: #305894;
+}
+
+.slidebox{
+  width:90%;
+  padding:5%;
+  margin-left: auto;
+  margin-right:auto;
+  object-fit: contain;
+  background-color: #305894;
+}
+
+.mySlides{
+  width:100%;
+}
+
+.catInfoBox{
+  width:90%;
+  padding:5%;
+  margin: auto;
+  background-color: #305894;
+  color:white;
+  font-size: clamp(12px, 1.5vw, 30px);
+}
+
+.catInfoBox p{
+  background-color: #305894;
+  color:white;
+  font-size: clamp(8px, 1vw, 26px);
+}
+
+.adoptbutton{
+  box-shadow: 0 4px 8px 0 black;
+  transition: 0.3s;
+  width: 50%;
+  margin-left: auto;
+  margin-right: auto;
+  display:flex;
+  padding: 2%;
+  position: relative;
+  border-radius: 5px;
+  color:black;
+  background-color: #f29202;
+  justify-content: center;
+}
+
+.adoptbutton:hover{
+  box-shadow: 0 8px 16px 0 black;
+  background-color: #026EF2;
+}
 

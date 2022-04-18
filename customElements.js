@@ -1,4 +1,22 @@
-userType = "admin";
+let userType = "default";
+let admin = 1;
+let adopter = 1;
+let foster = 1;
+let user = 1;
+
+
+if(user = 1){
+    if(adopter == 1){
+        userType = "adopter";
+    }
+    if(foster == 1){
+        userType = "foster";
+    }
+    if(admin == 1){
+        userType = "admin";
+    }
+}
+
 
 class siteHeader extends HTMLElement {
     connectedCallback() {   //called when this is appened to document       
@@ -301,6 +319,7 @@ class siteHeader extends HTMLElement {
                            <div class="topnav" id="myTopnav">
                                 <a  href="homePage.html">Home</a>
                                 <a  href="animal-list.html">Animals</a>
+                                <a href="myAnimalsGallery.html">My Animals</a>
                                 <a href="foster-list.html">Fosters</a>
                                 <a href="applications.html">Applications</a>
                                 <a  href="donate.html">Donate</a>
@@ -321,6 +340,7 @@ class siteHeader extends HTMLElement {
                             <div class="topnav" id="myTopnav">
                                 <a class="active" href="homePage.html">Home</a>
                                 <a  href="animal-list.html">Animals</a>
+                                <a href="myAnimalsGallery.html">My Animals</a>
                                 <a href="foster-list.html">Fosters</a>
                                 <a href="applications.html">Applications</a>
                                 <a  href="donate.html">Donate</a>
@@ -342,6 +362,28 @@ class siteHeader extends HTMLElement {
                             <div class="topnav" id="myTopnav">
                                 <a href="homePage.html">Home</a>
                                 <a class="active" href="animal-list.html">Animals</a>
+                                <a href="myAnimalsGallery.html">My Animals</a>
+                                <a href="foster-list.html">Fosters</a>
+                                <a href="applications.html">Applications</a>
+                                <a href="donate.html">Donate</a>
+                                <b>Signed in as Administrator</b>
+                                <a href="homePage.html">Logout</a>
+                                <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                                <i class="fa fa-bars"></i>
+                              </a>
+                                <div class="bannerContainer">
+                                     <img src="JustBeClawsHeaderImage.png" alt="JustBeClaws" class="bannerImage"/>                        
+                                </div>  
+                            </div>
+                        `;
+                    break;
+                    case "myAnimals":
+                        this.innerHTML = `
+ 
+                            <div class="topnav" id="myTopnav">
+                                <a href="homePage.html">Home</a>
+                                <a href="animal-list.html">Animals</a>
+                                <a  class="active" href="myAnimalsGallery.html">My Animals</a>
                                 <a href="foster-list.html">Fosters</a>
                                 <a href="applications.html">Applications</a>
                                 <a href="donate.html">Donate</a>
@@ -362,6 +404,7 @@ class siteHeader extends HTMLElement {
                             <div class="topnav" id="myTopnav">
                                 <a href="homePage.html">Home</a>
                                 <a href="animal-list.html">Animals</a>
+                                <a href="myAnimalsGallery.html">My Animals</a>
                                 <a class="active" href="foster-list.html">Fosters</a>
                                 <a href="applications.html">Applications</a>
                                 <a href="donate.html">Donate</a>
@@ -382,6 +425,7 @@ class siteHeader extends HTMLElement {
                             <div class="topnav" id="myTopnav">
                                 <a href="homePage.html">Home</a>
                                 <a href="animal-list.html">Animals</a>
+                                <a href="myAnimalsGallery.html">My Animals</a>
                                 <a href="foster-list.html">Fosters</a>
                                 <a class="active" href="applications.html">Applications</a>
                                 <a href="donate.html">Donate</a>
@@ -402,6 +446,7 @@ class siteHeader extends HTMLElement {
                             <div class="topnav" id="myTopnav">
                                 <a href="homePage.html">Home</a>
                                 <a  href="animal-list.html">Animals</a>
+                                <a href="myAnimalsGallery.html">My Animals</a>
                                 <a href="foster-list.html">Fosters</a>
                                 <a href="applications.html">Applications</a>
                                 <a class="active" href="donate.html">Donate</a>

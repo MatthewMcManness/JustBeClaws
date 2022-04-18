@@ -1,4 +1,6 @@
 let userType = "default";
+
+//*********getUserType function goes here********// 
 let admin = 1;
 let adopter = 1;
 let foster = 1;
@@ -472,15 +474,16 @@ const test = function() {
     console.log("success");
 }
 
-const switchUserType = function(type) {
-    userType = type;
+/*
+const getUsertype = function(type) {
+    user = //get from database
+    adopter = //get from database
+    foster = //get from database
+    admin = //get from database
     console.log(userType);
 }
+*/
 
-const switchActivePage = function(type){
-    activePage = type;
-    console.log(activePage);
-}
 
 customElements.define('site-header',siteHeader);
 

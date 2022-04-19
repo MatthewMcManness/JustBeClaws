@@ -2,9 +2,9 @@ let userType = "default";
 
 //*********getUserType function goes here********// 
 let admin = 1;
-let adopter = 1;
-let foster = 1;
-let user = 1;
+let adopter = 0;
+let foster = 0;
+let user = 0;
 
 
 if(user = 1){
@@ -32,12 +32,9 @@ class siteHeader extends HTMLElement {
                                 <a  href="homePage.html">Home</a>
                                 <a  href="animalsGallery.html">Animals</a>
                                 <a  href="donate.html">Donate</a>
-                                <a id="signUpModal" class="modal">Sign Up</a>
-                                <a id="loginModal" class="modal">Login</a>
-                                    <div class="modal-content">
-                                        <span class="close">&times;</span>
-                                        <p>Some text in the Modal..</p>
-                                    </div>
+                                <a id="signUpModal">Sign Up</a>
+                                <a id="loginModal">Login</a>
+
                                 <a href="javascript:void(0);" class="icon" onclick="myFunction()">
                                 <i class="fa fa-bars"></i>
                               </a>
@@ -49,21 +46,20 @@ class siteHeader extends HTMLElement {
                     break;
                     case "home":
                         this.innerHTML = `
-             
-                            <div class="topnav" id="myTopnav">
-                                <a class="active" href="homePage.html">Home</a>
-                                <a  href="animalsGallery.html">Animals</a>
-                                <a  href="donate.html">Donate</a>
-                                <a>Sign Up</a>
-                                <a>Login</a>
-                                <a href="javascript:void(0);" class="icon" onclick="myFunction()">
-                                <i class="fa fa-bars"></i>
-                              </a>
-                                <div class="bannerContainer">
-                                     <img src="JustBeClawsHeaderImage.png" alt="JustBeClaws" class="bannerImage"/>                        
-                                </div>  
-                            </div>
-                        `;
+                        <div class="topnav" id="myTopnav">
+                            <a  href="homePage.html">Home</a>
+                            <a  href="animalsGallery.html">Animals</a>
+                            <a  href="donate.html">Donate</a>
+                            <a id="signUpModal" class="modal">Sign Up</a>
+                            <a id="loginModal" class="modal">Login</a>
+                            <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                            <i class="fa fa-bars"></i>
+                          </a>
+                            <div class="bannerContainer">
+                                 <img src="JustBeClawsHeaderImage.png" alt="JustBeClaws" class="bannerImage"/>                        
+                            </div>  
+                        </div>
+                    `;
                     break;
                     case "animals":
                         this.innerHTML = `

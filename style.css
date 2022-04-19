@@ -162,6 +162,11 @@ html * {
     align-self: center;
   }
 
+  h3.card{
+    background-color: #dfe6ef;
+  }
+
+
   
   .cardPicture{
       width: 100%;
@@ -171,6 +176,11 @@ html * {
   /* On mouse-over, add a deeper shadow */
   .card:hover{
     box-shadow: 8px 8px 8px 4px black;
+    color: white;
+    background-color: #026EF2;
+  }
+
+  .card:hover h3{
     color: white;
     background-color: #026EF2;
   }
@@ -323,7 +333,7 @@ h1{
     text-decoration: none;
   }
 
-  .button{
+  .button-orange{
     box-shadow: 0 4px 8px 0 black;
     transition: 0.3s;
     width: 50%;
@@ -334,13 +344,13 @@ h1{
     position: relative;
     border-radius: 5px;
     color:white;
-    background-color: #305894;
+    background-color: #f29202;
     justify-content: center;
     text-decoration: none;
 
 
   }
-  .button:hover {
+  .button-orange:hover {
     box-shadow: 0 8px 16px 0 black;
     background-color: #026EF2;
   }
@@ -398,6 +408,7 @@ h1{
 .pic-basic{
   display: flex;
   width: 26%;
+  background-color: white;
 }
 
 
@@ -475,6 +486,13 @@ h1{
   background-color: #305894;
 }
 
+.pic{
+  width: 100%;
+  height:auto;
+  align-self: center;
+  background-color: white;
+}
+
 /* The Modal (background) */
 .modal {
   display: none; /* Hidden by default */
@@ -486,21 +504,13 @@ h1{
   height: 100%; /* Full height */
   overflow: auto; /* Enable scroll if needed */
   background-color: rgb(0,0,0); /* Fallback color */
-  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
-}
-
-/* Modal Content/Box */
-.modal-content {
-  background-color: #fefefe;
-  margin: 15% auto; /* 15% from the top and centered */
-  padding: 20px;
-  border: 1px solid #888;
-  width: 80%; /* Could be more or less, depending on screen size */
+  background-color: rgba(36, 104, 230, 0.4); /* Black w/ opacity */
 }
 
 /* The Close Button */
 .close {
-  color: #aaa;
+  color: white;
+  background-color: #026EF2;
   float: right;
   font-size: 28px;
   font-weight: bold;
@@ -513,6 +523,53 @@ h1{
   cursor: pointer;
 }
 
-.pic{
-  width: 100%;
+/* Modal Header */
+.modal-header {
+  padding: 2px 16px;
+  background-color: #026EF2;
+  color: white;
+}
+
+/* Modal Body */
+.modal-body {
+  display:flex;
+  justify-content: center;
+  padding: 2px 0;
+  width:100%
+}
+
+
+/* Modal Footer */
+.modal-footer {
+  padding: 2px 16px;
+  background-color: #305894;
+  color: white;
+}
+
+/* Modal Content */
+.modal-content {
+  position: relative;
+  background-color: #fefefe;
+  margin: 33% auto;
+  padding: 0;
+  border: 1px solid #888;
+  width: 80%;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+  animation-name: animatetop;
+  animation-duration: 0.4s
+}
+
+/* Add Animation */
+@keyframes animatetop {
+  from {top: -300px; opacity: 0}
+  to {top: 0; opacity: 1}
+}
+
+h2.Modal{
+  background-color: #026EF2;
+  display: flex;
+  margin-left: auto;
+  margin-right: auto;
+  justify-content: center;
+
 }

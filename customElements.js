@@ -2,12 +2,13 @@ let userType = "default";
 
 //*********getUserType function goes here********// 
 let admin = 1;
-let adopter = 0;
-let foster = 0;
-let user = 0;
+let adopter = 1;
+let foster = 1;
+let user = 1;
 
 
 if(user = 1){
+    userType="default";
     if(adopter == 1){
         userType = "adopter";
     }
@@ -32,9 +33,8 @@ class siteHeader extends HTMLElement {
                                 <a  href="homePage.html">Home</a>
                                 <a  href="animalsGallery.html">Animals</a>
                                 <a  href="donate.html">Donate</a>
-                                <a id="signUpModal">Sign Up</a>
-                                <a id="loginModal">Login</a>
-
+                                <a  href="#modal1">Login</a>
+                                <a href="#modal2">Sign Up</a>
                                 <a href="javascript:void(0);" class="icon" onclick="myFunction()">
                                 <i class="fa fa-bars"></i>
                               </a>
@@ -42,16 +42,61 @@ class siteHeader extends HTMLElement {
                                      <img src="JustBeClawsHeaderImage.png" alt="JustBeClaws" class="bannerImage"/>                        
                                 </div>  
                             </div>
+
+                                <div class="popup" id="modal1">
+                                    <div class="popup__overlay" href="#">
+                                        <div class="popup__wrapper">
+                                            <a class="popup__close" href="#">X</a>
+                                            <div>
+                                                <h2 class="Modal">Login</h2>
+                                            </div>
+                                            <div class="modal-body">
+                                                <p>First Name:</p> <input type="text" maxlength="20" placeholder="First Name goes here">
+                                            </div>
+                                            <div class="modal-body">
+                                                <p>Last Name:</p> <input type="text" maxlength="20" placeholder="Last Name goes here">
+                                            </div>
+                                            <div class="modal-footer">
+                                                <input type="button" value="Submit">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                
+            
+                                <div class="popup" id="modal2">
+                                    <div class="popup__overlay" href="#">
+                                        <div class="popup__wrapper">
+                                            <a class="popup__close" href="#">X</a>
+                                            <div>
+                                                <h2 class="Modal">Sign Up</h2>
+                                            </div>
+                                            <div class="modal-body">
+                                                <p>Username:</p> <input type="text" maxlength="20">
+                                            </div>
+                                            <div class="modal-body">
+                                                <p>Password:</p> <input type="text" maxlength="20">
+                                            </div>
+                                            <div class="modal-body">
+                                                <p>Confirm your Password:</p> <input type="text" maxlength="20">
+                                            </div>
+                                            <div class="modal-footer">
+                                                <input type="button" value="Submit">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                         `;
                     break;
                     case "home":
                         this.innerHTML = `
                         <div class="topnav" id="myTopnav">
-                            <a  href="homePage.html">Home</a>
-                            <a  href="animalsGallery.html">Animals</a>
+                            <a class="active" href="homePage.html">Home</a>
+                            <a href="animalsGallery.html">Animals</a>
                             <a  href="donate.html">Donate</a>
-                            <a id="signUpModal" class="modal">Sign Up</a>
-                            <a id="loginModal" class="modal">Login</a>
+                            <a  href="#modal1">Login</a>
+                            <a href="#modal2">Sign Up</a>
                             <a href="javascript:void(0);" class="icon" onclick="myFunction()">
                             <i class="fa fa-bars"></i>
                           </a>
@@ -59,6 +104,51 @@ class siteHeader extends HTMLElement {
                                  <img src="JustBeClawsHeaderImage.png" alt="JustBeClaws" class="bannerImage"/>                        
                             </div>  
                         </div>
+
+                            <div class="popup" id="modal1">
+                                <div class="popup__overlay" href="#">
+                                    <div class="popup__wrapper">
+                                        <a class="popup__close" href="#">X</a>
+                                        <div>
+                                            <h2 class="Modal">Login</h2>
+                                        </div>
+                                        <div class="modal-body">
+                                            <p>First Name:</p> <input type="text" maxlength="20" placeholder="First Name goes here">
+                                        </div>
+                                        <div class="modal-body">
+                                            <p>Last Name:</p> <input type="text" maxlength="20" placeholder="Last Name goes here">
+                                        </div>
+                                        <div class="modal-footer">
+                                            <input type="button" value="Submit">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            
+        
+                            <div class="popup" id="modal2">
+                                <div class="popup__overlay" href="#">
+                                    <div class="popup__wrapper">
+                                        <a class="popup__close" href="#">X</a>
+                                        <div>
+                                            <h2 class="Modal">Sign Up</h2>
+                                        </div>
+                                        <div class="modal-body">
+                                            <p>Username:</p> <input type="text" maxlength="20">
+                                        </div>
+                                        <div class="modal-body">
+                                            <p>Password:</p> <input type="text" maxlength="20">
+                                        </div>
+                                        <div class="modal-body">
+                                            <p>Confirm your Password:</p> <input type="text" maxlength="20">
+                                        </div>
+                                        <div class="modal-footer">
+                                            <input type="button" value="Submit">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                     `;
                     break;
                     case "animals":
@@ -67,8 +157,8 @@ class siteHeader extends HTMLElement {
                                 <a href="homePage.html">Home</a>
                                 <a class="active" href="animalsGallery.html">Animals</a>
                                 <a  href="donate.html">Donate</a>
-                                <a>Sign Up</a>
-                                <a>Login</a>
+                                <a  href="#modal1">Login</a>
+                                <a href="#modal2">Sign Up</a>
                                 <a href="javascript:void(0);" class="icon" onclick="myFunction()">
                                 <i class="fa fa-bars"></i>
                               </a>
@@ -76,6 +166,51 @@ class siteHeader extends HTMLElement {
                                      <img src="JustBeClawsHeaderImage.png" alt="JustBeClaws" class="bannerImage"/>                        
                                 </div>  
                             </div>
+    
+                                <div class="popup" id="modal1">
+                                    <div class="popup__overlay" href="#">
+                                        <div class="popup__wrapper">
+                                            <a class="popup__close" href="#">X</a>
+                                            <div>
+                                                <h2 class="Modal">Login</h2>
+                                            </div>
+                                            <div class="modal-body">
+                                                <p>First Name:</p> <input type="text" maxlength="20" placeholder="First Name goes here">
+                                            </div>
+                                            <div class="modal-body">
+                                                <p>Last Name:</p> <input type="text" maxlength="20" placeholder="Last Name goes here">
+                                            </div>
+                                            <div class="modal-footer">
+                                                <input type="button" value="Submit">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+    
+                                
+            
+                                <div class="popup" id="modal2">
+                                    <div class="popup__overlay" href="#">
+                                        <div class="popup__wrapper">
+                                            <a class="popup__close" href="#">X</a>
+                                            <div>
+                                                <h2 class="Modal">Sign Up</h2>
+                                            </div>
+                                            <div class="modal-body">
+                                                <p>Username:</p> <input type="text" maxlength="20">
+                                            </div>
+                                            <div class="modal-body">
+                                                <p>Password:</p> <input type="text" maxlength="20">
+                                            </div>
+                                            <div class="modal-body">
+                                                <p>Confirm your Password:</p> <input type="text" maxlength="20">
+                                            </div>
+                                            <div class="modal-footer">
+                                                <input type="button" value="Submit">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                         `;
                     break;
                     case "donate":
@@ -85,8 +220,8 @@ class siteHeader extends HTMLElement {
                                 <a href="homePage.html">Home</a>
                                 <a  href="animalsGallery.html">Animals</a>
                                 <a class="active" href="donate.html">Donate</a>
-                                <a>Sign Up</a>
-                                <a>Login</a>
+                                <a  href="#modal1">Login</a>
+                                <a href="#modal2">Sign Up</a>
                                 <a href="javascript:void(0);" class="icon" onclick="myFunction()">
                                 <i class="fa fa-bars"></i>
                               </a>
@@ -94,36 +229,51 @@ class siteHeader extends HTMLElement {
                                      <img src="JustBeClawsHeaderImage.png" alt="JustBeClaws" class="bannerImage"/>                        
                                 </div>  
                             </div>
-                        `;
-                    break;
-                    case "signUp":
-                        this.innerHTML = `
- 
-                            <div class="topnav" id="myTopnav">
-                                <a href="homePage.html">Home</a>
-                                <a  href="animalsGallery.html">Animals</a>
-                                <a  href="donate.html">Donate</a>
-                                <a class="active>Sign Up</a>
-                                <a>Login</a>
-                                <a href="javascript:void(0);" class="icon" onclick="myFunction()">
-                                <i class="fa fa-bars"></i>
-                              </a>
-                                <div class="bannerContainer">
-                                     <img src="JustBeClawsHeaderImage.png" alt="JustBeClaws" class="bannerImage"/>                        
-                                </div>  
-                            </div>
-                        `;
-                    break;
-                    case "login":
-                        this.innerHTML = `
-
-                            <div class="topnav" id="myTopnav">
-                                <a href="homePage.html">Home</a>
-                                <a  href="animalsGallery.html">Animals</a>
-                                <a  href="donate.html">Donate</a>
-                                <a>Sign Up</a>
-                                <a class="active" href="login.html">Login</a>
-                            </div>
+    
+                                <div class="popup" id="modal1">
+                                    <div class="popup__overlay" href="#">
+                                        <div class="popup__wrapper">
+                                            <a class="popup__close" href="#">X</a>
+                                            <div>
+                                                <h2 class="Modal">Login</h2>
+                                            </div>
+                                            <div class="modal-body">
+                                                <p>First Name:</p> <input type="text" maxlength="20" placeholder="First Name goes here">
+                                            </div>
+                                            <div class="modal-body">
+                                                <p>Last Name:</p> <input type="text" maxlength="20" placeholder="Last Name goes here">
+                                            </div>
+                                            <div class="modal-footer">
+                                                <input type="button" value="Submit">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+    
+                                
+            
+                                <div class="popup" id="modal2">
+                                    <div class="popup__overlay" href="#">
+                                        <div class="popup__wrapper">
+                                            <a class="popup__close" href="#">X</a>
+                                            <div>
+                                                <h2 class="Modal">Sign Up</h2>
+                                            </div>
+                                            <div class="modal-body">
+                                                <p>Username:</p> <input type="text" maxlength="20">
+                                            </div>
+                                            <div class="modal-body">
+                                                <p>Password:</p> <input type="text" maxlength="20">
+                                            </div>
+                                            <div class="modal-body">
+                                                <p>Confirm your Password:</p> <input type="text" maxlength="20">
+                                            </div>
+                                            <div class="modal-footer">
+                                                <input type="button" value="Submit">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                         `;
                     break;
                     }               

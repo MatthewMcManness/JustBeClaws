@@ -37,12 +37,54 @@
                     <br>
                     Foster Level: Level 3
                     <br>
-                    Special Certifications: Manx, Medical, Tubefeeding
-                    <br>
                     Current Number of Fosters: 18
 
-                    <div class="adoptbutton">Assign Cat</div>
-                    <div class="adoptbutton">Change Foster Level</div>
+                    <a class="adoptbutton" href="#modal1">Assign Cat</a>
+
+                    <div class="popup" id="modal1">
+                        <a class="popup__overlay" href="#"></a>
+                        <div class="popup__wrapper">
+                            <a class="popup__close" href="#">X</a>
+                            <div>
+                                <h2 class="Modal">Choose Cat</h2>
+                            </div>
+                            <div class="modal-body">
+                                <p>New Cat:</p>
+                                <select name="fosterName" id="fosterName">
+                                    <option value="1">Cat 1</option>
+                                    <option value="2">Cat 2</option>
+                                    <option value="3">Cat 3</option>
+                                    </select>   
+                            </div>
+                            <div class="modal-footer">
+                                <input type="button" value="Submit">
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <a class="adoptbutton" href="#modal2">Change Foster Level</a>
+
+                    <div class="popup" id="modal2">
+                        <a class="popup__overlay" href="#"></a>
+                        <div class="popup__wrapper">
+                            <a class="popup__close" href="#">X</a>
+                            <div>
+                                <h2 class="Modal">Choose New Foster Level</h2>
+                            </div>
+                            <div class="modal-body">
+                                <p>New Level:</p>
+                                <select name="fosterName" id="fosterName">
+                                    <option value="1">Level 1</option>
+                                    <option value="2">Level 2</option>
+                                    <option value="3">Level 3</option>
+                                    </select>   
+                            </div>
+                            <div class="modal-footer">
+                                <input type="button" value="Submit">
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>           
         </div>

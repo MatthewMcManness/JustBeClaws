@@ -43,21 +43,46 @@
                     <p>
                         Ruby is a wonderful cat that is looking for a forever home!
                     </p>
-                    <div class="adoptbutton">Update Description</div>
+                    <a class="adoptbutton" href="#modal1">Update Description</a>
+
+                    <div class="popup" id="modal1">
+                        <a class="popup__overlay" href="#"></a>
+                        <div class="popup__wrapper">
+                            <a class="popup__close" href="#">X</a>
+                                <div>
+                                    <h2 class="Modal">Update Description</h2>
+                                </div>
+                                <div class="modal-body">
+                                    <p>Description:</p> <input class="textarea" type="text" maxlength="100" placeholder="New Description goes here">
+                                </div>
+                                <div class="modal-footer">
+                                    <input type="button" value="Submit">
+                                </div>
+                            </div>
+                        </div>
+
+                        <a class="adoptbutton" href="#modal3">Add Photos</a>
+
+                    <div class="popup" id="modal3">
+                        <a class="popup__overlay" href="#"></a>
+                        <div class="popup__wrapper">
+                            <a class="popup__close" href="#">X</a>
+                                <div>
+                                    <h2 class="Modal">Add Photos</h2>
+                                </div>
+                                <div class="modal-body">
+                                    <p>Upload:</p> <input class="image">
+                                </div>
+                                <div class="modal-footer">
+                                    <input type="button" value="Submit">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>           
         </div>
 
-        <div class="content-emphasis">
-                <div class="graphBox">
-                    weight graph
-                </div>
-
-                <div class="graphBox">
-                    Feeding Chart
-                </div>
-                <div class="adoptbutton"> Log Data</div>
-        </div>
 
         <script src="animals.js" type="text/javascript" language="javascript"></script>
     </body>

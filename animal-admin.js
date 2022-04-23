@@ -64,28 +64,6 @@ const updatePageData = () => {
     document.getElementById('description').innerText = `${data[5]}`
 }
 
-//modal funcitons
-const onModal = (modalId) => {
-    //set display to block
-    document.getElementById(modalId).style.display='block';
-
-    if(modalId == 'modal1') { //description
-        //create input for 
-    } else if(modalId == 'modal2') { //assign foster
-
-        //query available cats
-        const availableFosters = ['Foster A', 'Foster B', 'Foster C'];
-        availableFosters.forEach((Foster,id) => {
-            const option = document.createElement('option');
-            option.innerHTML = `value=${id}`;
-            option.innerText = `${Foster}, id: ${id}`;
-            document.getElementById('foster-select').appendChild(option);
-        });
-    } else if(modalId == 'modal3') { //add image
-        
-    }
-}
-
 // DATABASE QUERIES
 //get images
 const getImageSrcs = () => {
@@ -134,13 +112,19 @@ const showModal = (modalId) => {
     if(modalId == 'modal1') { //description
         //create input for 
     } else if(modalId == 'modal2') { //assign foster
+        //clear options
+        document.querySelectorAll('option').forEach(e => e.remove());
 
-        //query available cats
+        //query available fosters
+
+
         const availableFosters = ['Foster A', 'Foster B', 'Foster C'];
-        availableFosters.forEach((Foster,id) => {
+
+
+        availableFosters.forEach((Foster) => {
             const option = document.createElement('option');
-            option.innerHTML = `value=${id}`;
-            option.innerText = `${Foster}, id: ${id}`;
+            //option.innerHTML = `value=${id}`;
+            option.innerText = `${Foster}`;
             document.getElementById('foster-select').appendChild(option);
         });
     } else if(modalId == 'modal3') { //add image

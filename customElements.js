@@ -6,6 +6,10 @@ let adopter = 1;
 let foster = 1;
 let user = 1;
 
+//get user type
+const getUserType = () => {
+    //query db for usertype
+}
 
 if(user = 1){
     userType="default";

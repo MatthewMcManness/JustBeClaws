@@ -220,7 +220,11 @@ h1{
 
 
 .next-image {
-    right:0;
+  right:5%;
+}
+
+.prev-image {
+  left: 5%;
 }
 
 .animal-main {
@@ -419,6 +423,7 @@ a .donate-button {
   margin-left: auto;
   margin-right:auto;
   object-fit: contain;
+  position:relative;
   background-color: #305894;
 }
 

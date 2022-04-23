@@ -7,7 +7,11 @@
         <link rel="stylesheet" href="style.css" type="text/css">
         <script src="customElements.js" type="text/javascript" language="javascript"></script>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
+        <style>
+            h5 {
+                background-color: #305894;
+            }
+        </style>
     </head>
     
     <header>
@@ -33,13 +37,11 @@
             </div>
             <div class="right">
                 <div class="catInfoBox">
-                    Name: Matthew McManness
-                    <br>
-                    Foster Level: Level 3
-                    <br>
-                    Current Number of Fosters: 18
+                    <h5 id="foster-name">Name:</h5>
+                    <h5 id="foster-level">Foster Level:</h5>
+                    <h5 id="num-fosters">Current Fosters:</h5>
 
-                    <a class="adoptbutton" href="#modal1">Assign Cat</a>
+                    <a class="adoptbutton" href="#modal1" onclick="onModal('modal1')">Assign Cat</a>
 
                     <div class="popup" id="modal1">
                         <a class="popup__overlay" href="#"></a>
@@ -50,14 +52,10 @@
                             </div>
                             <div class="modal-body">
                                 <p>New Cat:</p>
-                                <select name="fosterName" id="fosterName">
-                                    <option value="1">Cat 1</option>
-                                    <option value="2">Cat 2</option>
-                                    <option value="3">Cat 3</option>
-                                    </select>   
+                                <select name="assign-cat" id="assign-cat-select"></select>   
                             </div>
                             <div class="modal-footer">
-                                <input type="button" value="Submit">
+                                <input type="button" onclick="assignCat()" value="Submit">
                             </div>
                         </div>
                     </div>
@@ -74,14 +72,14 @@
                             </div>
                             <div class="modal-body">
                                 <p>New Level:</p>
-                                <select name="fosterName" id="fosterName">
+                                <select name="foster-level" id="foster-level-select">
                                     <option value="1">Level 1</option>
                                     <option value="2">Level 2</option>
                                     <option value="3">Level 3</option>
                                     </select>   
                             </div>
                             <div class="modal-footer">
-                                <input type="button" value="Submit">
+                                <input id='modal2-btn' type="button" onclick="changeFosterLevel()" value="Submit">
                             </div>
                         </div>
                     </div>

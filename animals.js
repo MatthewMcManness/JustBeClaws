@@ -14,27 +14,6 @@ let imageSources = [
 
 let imageIndex = 0;
 
-const initializePage = function () {
-    let labels = document.getElementById('info-div').getElementsByTagName('label');
-    let forms = document.getElementById('info-div').getElementsByTagName('input');
-    for(let i = 0; i < labels.length; i++) {
-        labels[i].innerText = info[i];
-        forms[i].value = info[i].toString().slice(0,-1);
-        forms[i].readOnly = true;
-        forms[i].style.color = "black";
-    }
-
-    //show description
-    document.getElementById('description-header').style.display = 'block';
-    document.getElementById('description').style.display = 'block';
-
-    //set image source
-    document.getElementById('animal-image').src = imageSources[imageIndex];
-
-    //clear image selection
-    clearSelection();
-}
-
 //#region Edit & Submit
 const editButtonHandler = function () {
     if(document.getElementById('edit-btn').innerText == "Edit") editAnimalInfo();
@@ -102,6 +81,7 @@ const submitEdits = function() {
 
 //#region show hide arrows
 const showArrows = function() {
+    console.log("called");
     document.getElementById('prev-image').style.opacity = 1;
     document.getElementById('next-image').style.opacity = 1;
 }
@@ -140,33 +120,20 @@ const clearSelection = function() {
     document.getElementById('image-uploader').value = '';
 }
 
-let slideIndex = 1;
-showSlides(slideIndex);
 
-// Next/previous controls
-function plusSlides(n) {
-  showSlides(slideIndex += n);
+// DATABASE QUERIES
+//get images
+const getImageSrcs = () => {
+
+};
+
+//upload image
+const uploadImageToDB = () => {
+
 }
 
-// Thumbnail image controls
-function currentSlide(n) {
-  showSlides(slideIndex = n);
+//assign to foster
+const assignToFoster = () => {
+
 }
 
-function showSlides(n) {
-  let i;
-  let slides = document.getElementsByClassName("mySlides");
-  let dots = document.getElementsByClassName("dot");
-  if (n > slides.length) {slideIndex = 1}
-  if (n < 1) {slideIndex = slides.length}
-  for (i = 0; i < slides.length; i++) {
-    slides[i].style.display = "none";
-  }
-  for (i = 0; i < dots.length; i++) {
-    dots[i].className = dots[i].className.replace(" active", "");
-  }
-  slides[slideIndex-1].style.display = "block";
-  dots[slideIndex-1].className += " active";
-}
-
-initializePage();

@@ -7,24 +7,8 @@
         <link rel="stylesheet" href="style.css" type="text/css">
         <script src="customElements.js" type="text/javascript" language="javascript"></script>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-        <style>
-            /* .prev-image, .next-image  {
-                background-color: #404040;
-                color:white;
-                opacity: 0;
-                padding: 3px;
-                cursor:pointer;
-                position:absolute;
-                top:50%;
-                margin-left:5px;
-                margin-right:5px;
-            }
-            
-            
-            .next-image {
-                right:0;
-            } */
-        </style>
+        <style>h5 {background-color: #305894; padding: 0px; margin:15px}</style>
+    
     </head>
     <header>
         <script>
@@ -44,53 +28,41 @@
     <body>
         <div class="primary">
             <div class="left">
-                <div class="slidebox">
-                    <img src="Cat.jpg" onmouseenter="showArrows()" onmouseexit="hideArrows()" class="mySlides">
+                <div class="slidebox" onmouseleave="hideArrows()">
+                    <img src="Cat.jpg" onmouseenter="showArrows()"  class="mySlides">
                     <a id="prev-image" class="prev-image" onclick="changeImage(-1)">&#11164</a>
                     <a id="next-image" class="next-image" onclick="changeImage(1)">&#11166</a>
                 </div>
             </div>
             <div class="right">
                 <div class="catInfoBox">
-                    Name: Ruby
-                    <br>
-                    Age: 1 year 9 months
-                    <br>
-                    Breed: Domestic Long Hair
-                    <br>
-                    Adopter: None
-                    <br>
-                    Adoption Date: TBD
-                    <br>
-                    <p>
-                        Ruby is a wonderful cat that is looking for a forever home!
-                    </p>
-                    
+                    <h5 id="cat-name"></h5>
+                    <h5 id="cat-age"></h5>
+                    <h5 id="cat-breed"></h5>
+                    <h5 id="cat-adopter"></h5>
+                    <h5 id="cat-adoption-date"></h5>
+                    <p id="description"></p>
                 </div>
-                <a class="adoptbutton" href="#modal1">Update Description</a>
-
+                <a class="adoptbutton" onclick="showModal('modal1')">Update Description</a>
                 <div class="popup" id="modal1">
-                    <a class="popup__overlay" href="#"></a>
                     <div class="popup__wrapper">
-                        <a class="popup__close" href="#">X</a>
+                        <span class="popup__close" onclick="hideModal('modal1')">X</span>
                         <div>
                             <h2 class="Modal">Update Description</h2>
                         </div>
                         <div class="modal-body">
-                            <p>Description:</p> <input class="textarea" type="text" maxlength="100" placeholder="New Description goes here">
+                            <p>Description:</p> <input id='desc-text' class="textarea" type="text" maxlength="100" placeholder="New Description goes here">
                         </div>
                         <div class="modal-footer">
-                            <input type="button" value="Submit">
+                            <input type="button" onclick="updateDescription();" value="Submit">
                         </div>
                     </div>
                 </div>
 
-                <a class="adoptbutton" href="#modal3">Add Photos</a>
-
+                <a class="adoptbutton" onclick="showModal('modal3')">Add Photos</a>
                 <div class="popup" id="modal3">
-                    <a class="popup__overlay" href="#"></a>
                     <div class="popup__wrapper">
-                        <a class="popup__close" href="#">X</a>
+                        <span class="popup__close" onclick="hideModal('modal3')">X</span>
                         <div>
                             <h2 class="Modal">Add Photos</h2>
                         </div>
@@ -98,36 +70,30 @@
                             <p>Upload:</p> <input class="image">
                         </div>
                         <div class="modal-footer">
-                            <input type="button" value="Submit">
+                            <input type="button" onclick="uploadImage()"value="Submit">
                         </div>
                     </div>
                 </div>
 
-                <a class="adoptbutton" href="#modal2">Assign to a new Foster</a>
-
+                <a class="adoptbutton" onclick="showModal('modal2')">Assign to a new Foster</a>
                 <div class="popup" id="modal2">
-                    <a class="popup__overlay" href="#"></a>
                     <div class="popup__wrapper">
-                        <a class="popup__close" href="#">X</a>
+                        <span class="popup__close" onclick="hideModal('modal2')">X</span>
                         <div>
                             <h2 class="Modal">Choose Foster</h2>
                         </div>
                         <div class="modal-body">
                             <p>New Foster:</p>
-                            <select name="fosterName" id="fosterName">
-                                <option value="1">Foster 1</option>
-                                <option value="2">Foster 2</option>
-                                <option value="3">Foster 3</option>
-                                </select>   
+                            <select name="foster" id="foster-select"></select>   
                         </div>
                         <div class="modal-footer">
-                            <input type="button" value="Submit">
+                            <input type="button" onclick="assignToFoster();" value="Submit">
                         </div>
                     </div>
                 </div>
             </div>
         </div>
 
-        <script src="animals.js" type="text/javascript" language="javascript"></script>
+        <script src="animal-admin.js" type="text/javascript" language="javascript"></script>
     </body>
 </html>

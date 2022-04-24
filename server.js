@@ -5,6 +5,7 @@ const cors = require('cors');
 const bodyParser = require('body-parser');
 const path = require('path');
 const mysql = require('mysql');
+const { is } = require('express/lib/request');
 const port = '3000';
 
 //users
@@ -47,6 +48,7 @@ db.connect((err) => {
 // END Points ----------------------------------------------------------------
 //login
 app.post('/login', (req,res) => {
+
     //query list of users
     let sql = 'SELECT username, password FROM Users';
     let users = [];
@@ -56,24 +58,31 @@ app.post('/login', (req,res) => {
         //compare each user to given credentials
         result.forEach(user => {
             if(user.username == req.body.username && user.password == req.body.password) {
-                console.log("LOGGED IN as, ",user.username);
+                console.log("LOGGED IN as ",user.username);
 
                 //create session user
                 req.session.user = user;
+
+                //open new page
                 res.redirect('/');
             }
         });
+
+        //send fail message
+        //if(!req.session.user) res.send(false);
+       //else res.send(true);
     });
 });
 
 
 //home
 app.get('/', (req, res) => {
+    console.log('/ called');
     res.sendFile(path.join(__dirname, "/homePage.html"));
 
     //check which user is logged in, if any
     if(req.session.user) {
-        console.log(user);
+        console.log(req.session.user);
     }
 });
 

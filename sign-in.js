@@ -37,19 +37,9 @@ const signIn = () => {
     //query database and see if login is correct
 
     attemptLogin(clientUsername,clientPassword);
-    console.log("helle");
-
-    //placeholder
-    placeholderUsers.forEach(user => {
-        if(clientUsername == user.username && clientPassword == user.password) {
-            success = true;
-            console.log("SUCCESS");
-        }
-    });
-   
-
+    
     //if incorrect print error message
-    if(!success) {
+    if(true) {
         document.getElementById('failed-login').style.display='block'; 
         clientUsername ="";
     }
@@ -65,9 +55,9 @@ const attemptLogin = async (client_username,client_password) => {
 
     console.log('stringify: ',JSON.stringify(data));
 
-    await fetch('http://localhost:3000/login', {
+    let response = await fetch('http://localhost:3000/login', {
         method: 'POST',
         headers: {'Content-Type': 'application/json;charset=utf-8'},
         body: JSON.stringify(data)
-    });
+    })
 }

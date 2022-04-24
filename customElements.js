@@ -466,7 +466,7 @@ class siteHeader extends HTMLElement {
                                
                            <div class="topnav" id="myTopnav">
                                 <a  href="homePage.html">Home</a>
-                                <a  href="animal-list.html">Animals</a>
+                                <a  href="animal-list.php">Animals</a>
                                 <a href="myAnimalsGallery.html">My Animals</a>
                                 <a href="foster-list.html">Fosters</a>
                                 <a href="applications.html">Applications</a>
@@ -487,7 +487,7 @@ class siteHeader extends HTMLElement {
                  
                             <div class="topnav" id="myTopnav">
                                 <a class="active" href="homePage.html">Home</a>
-                                <a  href="animal-list.html">Animals</a>
+                                <a  href="animal-list.php">Animals</a>
                                 <a href="myAnimalsGallery.html">My Animals</a>
                                 <a href="foster-list.html">Fosters</a>
                                 <a href="applications.html">Applications</a>
@@ -509,7 +509,7 @@ class siteHeader extends HTMLElement {
  
                             <div class="topnav" id="myTopnav">
                                 <a href="homePage.html">Home</a>
-                                <a class="active" href="animal-list.html">Animals</a>
+                                <a class="active" href="animal-list.php">Animals</a>
                                 <a href="myAnimalsGallery.html">My Animals</a>
                                 <a href="foster-list.html">Fosters</a>
                                 <a href="applications.html">Applications</a>
@@ -530,7 +530,7 @@ class siteHeader extends HTMLElement {
  
                             <div class="topnav" id="myTopnav">
                                 <a href="homePage.html">Home</a>
-                                <a href="animal-list.html">Animals</a>
+                                <a href="animal-list.php">Animals</a>
                                 <a  class="active" href="myAnimalsGallery.html">My Animals</a>
                                 <a href="foster-list.html">Fosters</a>
                                 <a href="applications.html">Applications</a>
@@ -551,7 +551,7 @@ class siteHeader extends HTMLElement {
  
                             <div class="topnav" id="myTopnav">
                                 <a href="homePage.html">Home</a>
-                                <a href="animal-list.html">Animals</a>
+                                <a href="animal-list.php">Animals</a>
                                 <a href="myAnimalsGallery.html">My Animals</a>
                                 <a class="active" href="foster-list.html">Fosters</a>
                                 <a href="applications.html">Applications</a>
@@ -572,7 +572,7 @@ class siteHeader extends HTMLElement {
  
                             <div class="topnav" id="myTopnav">
                                 <a href="homePage.html">Home</a>
-                                <a href="animal-list.html">Animals</a>
+                                <a href="animal-list.php">Animals</a>
                                 <a href="myAnimalsGallery.html">My Animals</a>
                                 <a href="foster-list.html">Fosters</a>
                                 <a class="active" href="applications.html">Applications</a>
@@ -593,7 +593,7 @@ class siteHeader extends HTMLElement {
              
                             <div class="topnav" id="myTopnav">
                                 <a href="homePage.html">Home</a>
-                                <a  href="animal-list.html">Animals</a>
+                                <a  href="animal-list.php">Animals</a>
                                 <a href="myAnimalsGallery.html">My Animals</a>
                                 <a href="foster-list.html">Fosters</a>
                                 <a href="applications.html">Applications</a>

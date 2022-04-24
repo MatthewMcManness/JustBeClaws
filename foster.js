@@ -83,6 +83,3 @@ const changeFosterLevel = () => {
 }
 
 updatePageData();
-//event listeners
-//document.getElementById('modal2-btn').addEventListener('click', changeFosterLevel());
-

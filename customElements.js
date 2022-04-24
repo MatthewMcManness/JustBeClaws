@@ -1,17 +1,15 @@
 let userType = "default";
 
-//*********getUserType function goes here********// 
 let admin = 0;
 let adopter = 0;
 let foster = 0;
-let user = 0;
+
 
 //get user type
 const getUserType = () => {
     //query db for usertype
 }
 
-if(user = 1){
     userType="default";
     if(adopter == 1){
         userType = "adopter";
@@ -22,7 +20,7 @@ if(user = 1){
     if(admin == 1){
         userType = "admin";
     }
-}
+
 
 
 class siteHeader extends HTMLElement {

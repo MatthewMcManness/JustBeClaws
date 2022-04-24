@@ -40,7 +40,7 @@ const drawGrid = () => {
         image.className = 'cardPicture';
 
         //create header
-        const nameText = document.createElement('h3');
+        const nameText = document.createElement('h3')
         nameText.innerText = cat.name;
 
         //create data

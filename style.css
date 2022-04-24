@@ -164,6 +164,7 @@ html * {
 
   h3.card{
     background-color: #dfe6ef;
+    transition: 0.3s;
   }
 
 

@@ -469,7 +469,7 @@ class siteHeader extends HTMLElement {
                                 <a  href="animal-list.html">Animals</a>
                                 <a href="myAnimalsGallery.html">My Animals</a>
                                 <a href="foster-list.html">Fosters</a>
-                                <a href="applications.html">Applications</a>
+                                
                                 <a  href="donate.html">Donate</a>
                                 <b>Signed in as Administrator</b>
                                 <a  href="homePage.html">Logout</a>
@@ -490,7 +490,7 @@ class siteHeader extends HTMLElement {
                                 <a  href="animal-list.html">Animals</a>
                                 <a href="myAnimalsGallery.html">My Animals</a>
                                 <a href="foster-list.html">Fosters</a>
-                                <a href="applications.html">Applications</a>
+                                
                                 <a  href="donate.html">Donate</a>
                                 <b>Signed in as Administrator</b>
                                 <a  href="homePage.html">Logout</a>
@@ -512,7 +512,7 @@ class siteHeader extends HTMLElement {
                                 <a class="active" href="animal-list.html">Animals</a>
                                 <a href="myAnimalsGallery.html">My Animals</a>
                                 <a href="foster-list.html">Fosters</a>
-                                <a href="applications.html">Applications</a>
+                                
                                 <a href="donate.html">Donate</a>
                                 <b>Signed in as Administrator</b>
                                 <a href="homePage.html">Logout</a>
@@ -533,7 +533,7 @@ class siteHeader extends HTMLElement {
                                 <a href="animal-list.html">Animals</a>
                                 <a  class="active" href="myAnimalsGallery.html">My Animals</a>
                                 <a href="foster-list.html">Fosters</a>
-                                <a href="applications.html">Applications</a>
+                                
                                 <a href="donate.html">Donate</a>
                                 <b>Signed in as Administrator</b>
                                 <a href="homePage.html">Logout</a>
@@ -554,7 +554,7 @@ class siteHeader extends HTMLElement {
                                 <a href="animal-list.html">Animals</a>
                                 <a href="myAnimalsGallery.html">My Animals</a>
                                 <a class="active" href="foster-list.html">Fosters</a>
-                                <a href="applications.html">Applications</a>
+                                
                                 <a href="donate.html">Donate</a>
                                 <b>Signed in as Administrator</b>
                                 <a href="homePage.html">Logout</a>
@@ -575,7 +575,7 @@ class siteHeader extends HTMLElement {
                                 <a href="animal-list.html">Animals</a>
                                 <a href="myAnimalsGallery.html">My Animals</a>
                                 <a href="foster-list.html">Fosters</a>
-                                <a class="active" href="applications.html">Applications</a>
+                               
                                 <a href="donate.html">Donate</a>
                                 <b>Signed in as Administrator</b>
                                 <a href="homePage.html">Logout</a>
@@ -596,7 +596,7 @@ class siteHeader extends HTMLElement {
                                 <a  href="animal-list.html">Animals</a>
                                 <a href="myAnimalsGallery.html">My Animals</a>
                                 <a href="foster-list.html">Fosters</a>
-                                <a href="applications.html">Applications</a>
+                                
                                 <a class="active" href="donate.html">Donate</a>
                                 <b>Signed in as Administrator</b>
                                 <a  href="homePage.html">Logout</a>

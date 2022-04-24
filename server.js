@@ -48,10 +48,10 @@ db.connect((err) => {
 // END Points ----------------------------------------------------------------
 //login
 app.post('/login', (req,res) => {
+    let isLoggedIn = false;
 
     //query list of users
     let sql = 'SELECT username, password FROM Users';
-    let users = [];
     db.query(sql, (err,result) => {
         if(err)throw err;
 
@@ -64,13 +64,12 @@ app.post('/login', (req,res) => {
                 req.session.user = user;
 
                 //open new page
-                res.redirect('/');
+                isLoggedIn = true;
+                
             }
         });
-
-        //send fail message
-        //if(!req.session.user) res.send(false);
-       //else res.send(true);
+        
+        res.json({ success: isLoggedIn});
     });
 });
 
@@ -82,7 +81,7 @@ app.get('/', (req, res) => {
 
     //check which user is logged in, if any
     if(req.session.user) {
-        console.log(req.session.user);
+        console.log('session user',req.session.user);
     }
 });
 

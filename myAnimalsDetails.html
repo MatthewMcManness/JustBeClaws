@@ -7,7 +7,7 @@
         <link rel="stylesheet" href="style.css" type="text/css">
         <script src="customElements.js" type="text/javascript" language="javascript"></script>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
+        <style>h5 {background-color: #305894; padding: 0px; margin:15px}</style>
     </head>
     
     <header>
@@ -34,48 +34,42 @@
             </div>
             <div class="right">
                 <div class="catInfoBox">
-                    Name: Ruby
-                    <br>
-                    Age: 1 year 9 months
-                    <br>
-                    Breed: Domestic Long Hair
-                    <br>
-                    <p>
-                        Ruby is a wonderful cat that is looking for a forever home!
-                    </p>
-                    <a class="adoptbutton" href="#modal1">Update Description</a>
-
+                    <div class="catInfoBox">
+                        <h5 id="cat-name"></h5>
+                        <h5 id="cat-age"></h5>
+                        <h5 id="cat-breed"></h5>
+                        <h5 id="cat-adopter"></h5>
+                        <h5 id="cat-adoption-date"></h5>
+                        <p id="description"></p>
+                    </div>
+                    <a class="adoptbutton" onclick="showModal('modal1')">Update Description</a>
                     <div class="popup" id="modal1">
-                        <a class="popup__overlay" href="#"></a>
                         <div class="popup__wrapper">
-                            <a class="popup__close" href="#">X</a>
-                                <div>
-                                    <h2 class="Modal">Update Description</h2>
-                                </div>
-                                <div class="modal-body">
-                                    <p>Description:</p> <input class="textarea" type="text" maxlength="100" placeholder="New Description goes here">
-                                </div>
-                                <div class="modal-footer">
-                                    <input type="button" value="Submit">
-                                </div>
+                            <span class="popup__close" onclick="hideModal('modal1')">X</span>
+                            <div>
+                                <h2 class="Modal">Update Description</h2>
+                            </div>
+                            <div class="modal-body">
+                                <p>Description:</p> <input id='desc-text' class="textarea" type="text" maxlength="100" placeholder="New Description goes here">
+                            </div>
+                            <div class="modal-footer">
+                                <input type="button" onclick="updateDescription();" value="Submit">
                             </div>
                         </div>
+                    </div>
 
-                        <a class="adoptbutton" href="#modal3">Add Photos</a>
-
+                    <a class="adoptbutton" onclick="showModal('modal3')">Add Photos</a>
                     <div class="popup" id="modal3">
-                        <a class="popup__overlay" href="#"></a>
                         <div class="popup__wrapper">
-                            <a class="popup__close" href="#">X</a>
-                                <div>
-                                    <h2 class="Modal">Add Photos</h2>
-                                </div>
-                                <div class="modal-body">
-                                    <p>Upload:</p> <input class="image">
-                                </div>
-                                <div class="modal-footer">
-                                    <input type="button" value="Submit">
-                                </div>
+                            <span class="popup__close" onclick="hideModal('modal3')">X</span>
+                            <div>
+                                <h2 class="Modal">Add Photos</h2>
+                            </div>
+                            <div class="modal-body">
+                                <p>Upload:</p> <input class="image">
+                            </div>
+                            <div class="modal-footer">
+                                <input type="button" onclick="uploadImage()"value="Submit">
                             </div>
                         </div>
                     </div>
@@ -83,7 +77,6 @@
             </div>           
         </div>
 
-
-        <script src="animals.js" type="text/javascript" language="javascript"></script>
+        <script src="my-animal.js" type="text/javascript" language="javascript"></script>
     </body>
 </html>

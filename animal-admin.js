@@ -76,7 +76,9 @@ const uploadImage = () => {
     document.getElementById('modal3').style.display='none';
 
 
-    //query db
+    //query db to add image
+
+
     console.log(document.getElementById('image submitted').value);
 
 }

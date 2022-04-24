@@ -3,10 +3,10 @@
 
 //placeholders
 const cats = [  
-    {name: 'Jack', imgSrc: 'jack.jpg', id: '0'},
-    {name: 'Ruby', imgSrc: 'ruby.jpg', id: '1'},
-    {name: 'Havarti', imgSrc: 'Cat.jpg', id: '2'},
-    {name: 'Cat', imgSrc: '', id: '3'}
+    {name: 'cat a', imgSrc: 'kitten.jpg', id: '0'},
+    {name: 'cat b', imgSrc: 'litter.jpg', id: '1'},
+    {name: 'cat c', imgSrc: 'Cat.jpg', id: '2'},
+    {name: 'cat d', imgSrc: '', id: '3'}
 ];
 
 // GO TO CAT PAGE

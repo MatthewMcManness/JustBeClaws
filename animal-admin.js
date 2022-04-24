@@ -113,7 +113,7 @@ const showModal = (modalId) => {
     //show data for modal
     if(modalId == 'modal1') { //description
         //create input for 
-    } else if(modalId == 'modal2') { //assign foster
+    } else if(modalId == 'modal4') { //assign foster
         //clear options
         document.querySelectorAll('option').forEach(e => e.remove());
 

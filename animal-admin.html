@@ -76,16 +76,19 @@
                     </div>
                 </div>
 
-                <a class="adoptbutton" onclick="showModal('modal2')">Assign to a new Foster</a>
-                <div class="popup" id="modal2">
+                <a class="adoptbutton" onclick="showModal('modal4')">Assign to a new Foster</a>
+                <div class="popup" id="modal4">
                     <div class="popup__wrapper">
-                        <span class="popup__close" onclick="hideModal('modal2')">X</span>
+                        <span class="popup__close" onclick="hideModal('modal4')">X</span>
                         <div>
                             <h2 class="Modal">Choose Foster</h2>
                         </div>
                         <div class="modal-body">
                             <p>New Foster:</p>
-                            <select name="foster" id="foster-select"></select>   
+                            <select name="foster" id="foster-select">
+                                <option value="1">Foster 1</option>
+                                <option value="2">Foster 2</option>
+                            </select>   
                         </div>
                         <div class="modal-footer">
                             <input type="button" onclick="assignToFoster();" value="Submit">

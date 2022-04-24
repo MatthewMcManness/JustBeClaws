@@ -1,0 +1,29 @@
+{
+  "name": "JustBeClaws",
+  "version": "1.0.0",
+  "description": "",
+  "main": "animal-admin.js",
+  "dependencies": {
+    "express": "^4.17.3",
+    "jquery": "^3.6.0",
+    "mysql": "^2.18.1",
+    "node": "^17.7.2",
+    "node.js": "^0.0.1-security"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DarkNerevar/JustBeClaws.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/DarkNerevar/JustBeClaws/issues"
+  },
+  "homepage": "https://github.com/DarkNerevar/JustBeClaws#readme"
+}

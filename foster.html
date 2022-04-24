@@ -41,12 +41,10 @@
                     <h5 id="foster-level">Foster Level:</h5>
                     <h5 id="num-fosters">Current Fosters:</h5>
 
-                    <a class="adoptbutton" href="#modal1" onclick="onModal('modal1')">Assign Cat</a>
-
+                    <a class="adoptbutton" onclick="showModal('modal1')">Assign Cat</a>
                     <div class="popup" id="modal1">
-                        <a class="popup__overlay" href="#"></a>
                         <div class="popup__wrapper">
-                            <a class="popup__close" href="#">X</a>
+                            <span class="popup__close" onclick="hideModal('modal1')">X</span>
                             <div>
                                 <h2 class="Modal">Choose Cat</h2>
                             </div>
@@ -60,13 +58,10 @@
                         </div>
                     </div>
 
-
-                    <a class="adoptbutton" href="#modal2">Change Foster Level</a>
-
+                    <a class="adoptbutton" onclick="showModal('modal2')">Change Foster Level</a>
                     <div class="popup" id="modal2">
-                        <a class="popup__overlay" href="#"></a>
                         <div class="popup__wrapper">
-                            <a class="popup__close" href="#">X</a>
+                            <span class="popup__close" onclick="hideModal('modal2')">X</span>
                             <div>
                                 <h2 class="Modal">Choose New Foster Level</h2>
                             </div>

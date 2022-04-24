@@ -10,95 +10,7 @@ const data = ['Mathew McManess','3','18'];
 let imageSource = "foster-placeholder.jpg";
 
 let imageIndex = 0;
-//#region  old code
-// //initialize page
-// const initializePage = function () {
-//     let labels = document.getElementById('info-div').getElementsByTagName('label');
-//     let forms = document.getElementById('info-div').getElementsByTagName('input');
-//     for(let i = 0; i < labels.length; i++) {
-//         labels[i].innerText = info[i];
-//         forms[i].value = info[i].toString().slice(0,-1);
-//         forms[i].readOnly = true;
-//         forms[i].style.color = "black";
-//     }
 
-//     //set image source
-//     document.getElementById('animal-image').src = imageSource;
-
-//     //clear image selection
-//     clearSelection();
-
-//     //get animals
-//     printAnimals();
-
-//     //add animal subtitle
-    
-// }
-
-// //editbutton handler
-// const editButtonHandler = function () {
-//     if(document.getElementById('edit-btn').innerText == "Edit") editFosterInfo();
-//     else submitEdits();
-// }
-
-// //edit foster
-// const editFosterInfo = function() {
-//     //loop through each form allow them to be editable
-//     let forms = document.getElementsByTagName('input');
-//     for(let i = 0; i < forms.length; i++) {
-//         forms[i].readOnly = false;
-//     }
-
-//     //update button text
-//     document.getElementById('edit-btn').innerText = "Submit";
-
-//     //show file select & clear
-//     document.getElementById('image-uploader').style.display="inline-block";
-//     document.getElementById('clear-btn').style.display='inline-block';
-//     document.getElementById('clear-btn').style.float='right';
-// }
-
-// //submit edits
-// const submitEdits = function() {
-//     //loop through each form and save their text, make the forms readonly again
-//     let forms = document.querySelectorAll('input');
-//     for(let i = 0; i < forms.length; i++) {
-//         //saveEdits();  //implemented later
-//         forms[i].readOnly = true;
-//     }
-
-//     //update button inner text
-//     document.getElementById('edit-btn').innerText = "Edit";
-
-//     changeImage();
-
-//     //hide file selector & clear
-//     document.getElementById('image-uploader').style.display="none";
-//     document.getElementById('clear-btn').style.display='none';
-// }
-
-// //change image
-// const changeImage = function() {
-//     let src = document.getElementById('image-uploader').value;
-//     if(src != ''){ 
-//         imageSource = src;
-//     }
-//     console.log(imageSource);
-//     clearSelection();
-// }
-
-// //clearselection
-// const clearSelection = function() {
-//     document.getElementById('image-uploader').value = '';
-// }
-
-// //print animals
-// const printAnimals = function() {
-
-// }
-//#endregion
-
-//initializePage();
 
 
 //initialize page
@@ -111,23 +23,43 @@ const updatePageData = () => {
 }
 
 
-//modal funcitons
-const onModal = (modalId) => {
-    if(modalId == 'modal1') {
-        //query available cats
-        const availableCats = ['cat A', 'cat B', 'cat C'];
-        availableCats.forEach((cat,id) => {
-            const option = document.createElement('option');
-            option.innerHTML = `value=${id}`;
-            option.innerText = `${cat}, id: ${id}`;
-            document.getElementById('assign-cat-select').appendChild(option);
-        });
-    } else {
-        
-    }
+
+// HIDE MODAL
+const hideModal = (modalId) => {
+    document.getElementById(modalId).style.display='none';
 }
 
+// SHOW MODAL
+const showModal = (modalId) => {
+    document.getElementById(modalId).style.display='block';
 
+    //show data for modal
+    if(modalId == 'modal1') { //assign cat
+        //clear options
+        document.querySelectorAll('option').forEach(e => e.remove());
+
+        //query available cats
+        const availableCats = ['Cat A', 'Cat B', 'Cat C'];
+
+
+        availableCats.forEach((cat) => {
+            const option = document.createElement('option');
+            //option.innerHTML = `value=${id}`;
+            option.innerText = `${cat}`;
+            document.getElementById('assign-cat-select').appendChild(option);
+        });
+        
+    } else if(modalId == 'modal2') { //change foster level
+        //clear options
+        document.querySelectorAll('option').forEach(e => e.remove());
+
+        for(let i=0; i < 3; i++) {
+            const level = document.createElement('option');
+            level.innerText = `Level ${i+1}`;
+            document.getElementById('foster-level-select').appendChild(level);
+        }
+    }
+}
 
 const assignCat = () => {
     //query db
@@ -135,6 +67,7 @@ const assignCat = () => {
     //placeholder result
     console.log(document.getElementById('assign-cat-select').value);
     data[2]++;
+    hideModal('modal1');
     updatePageData();
 }
 
@@ -144,6 +77,7 @@ const changeFosterLevel = () => {
     //placeholder result
     console.log(document.getElementById('foster-level-select').value);
     data[1] =     document.getElementById('foster-level-select').value;
+    hideModal('modal2');
     updatePageData();
 
 }

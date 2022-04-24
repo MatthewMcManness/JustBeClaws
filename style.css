@@ -490,6 +490,7 @@ a.adoptbutton:hover{
   justify-content: center;
   text-decoration: none;
   color:white;
+  cursor:pointer;
 }
 
 .adoptbutton:hover{

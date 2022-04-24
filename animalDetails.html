@@ -7,7 +7,7 @@
         <link rel="stylesheet" href="style.css" type="text/css">
         <script src="customElements.js" type="text/javascript" language="javascript"></script>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
+        <style>h5 {background-color: #305894; padding: 0px; margin:15px}</style>
     </head>
     
     <header>
@@ -28,25 +28,24 @@
     <body>
         <div class="primary">
             <div class="left">
-                <div class="slidebox">
-                    <img src="Cat.jpg" class="mySlides">
+                <div class="slidebox"  onmouseleave="hideArrows()" >
+                    <img src="Cat.jpg" onmouseenter="showArrows()" class="mySlides">
+                    <a id="prev-image" class="prev-image" onclick="changeImage(-1)">&#11164</a>
+                    <a id="next-image" class="next-image" onclick="changeImage(1)">&#11166</a>
                 </div>
             </div>
             <div class="right">
                 <div class="catInfoBox">
-                    Name: Ruby
-                    <br>
-                    Age: 1 year 9 months
-                    <br>
-                    Breed: Domestic Long Hair
-                    <br>
-                    <p>
-                        Ruby is a wonderful cat that is looking for a forever home!
-                    </p>
-                    <div class="adoptbutton">Adopt Me!</div>
+                    <div class="catInfoBox">
+                        <h5 id="cat-name"></h5>
+                        <h5 id="cat-age"></h5>
+                        <h5 id="cat-breed"></h5>
+                        <p id="description"></p>
+                    </div>
+                    <div class="adoptbutton" onclick="Adopt()">Adopt Me!</div>
                 </div>
             </div>           
         </div>
-        <script src="animals.js" type="text/javascript" language="javascript"></script>
+        <script src="animal.js" type="text/javascript" language="javascript"></script>
     </body>
 </html>

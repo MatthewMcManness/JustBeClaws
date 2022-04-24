@@ -1,0 +1,56 @@
+
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>JustBeClaws</title>
+        <link rel="icon" href="justBeClawsIcon.png">
+        <link rel="stylesheet" href="style.css" type="text/css">
+        <script src="customElements.js" type="text/javascript" language="javascript"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <style>
+            h5 {background-color: #305894; padding: 0px; margin:15px}
+            .signInDiv {background-color:#305894; position:relative; top:50%; transform:translateY(-50%);}
+            label {background-color: #305894; color:white;}
+            
+        </style>
+    </head>
+    
+    <header>
+        <script>
+            activePage="animals";
+            function myFunction() {
+                var x = document.getElementById("myTopnav");
+                if (x.className === "topnav") {
+                    x.className += " responsive";
+                } else {
+                    x.className = "topnav";
+                }
+            }
+        </script>
+       <site-header></site-header>
+    </header>
+    
+    <body>
+        <div class="primary">
+            <div class="left">
+                <div class="slidebox">
+                    <img src="Cat.jpg" id="animal-image" class="mySlides">
+                </div>
+            </div>
+            <div class="right">
+                <div class="signInDiv">
+                    <label for="username">Username: </label>
+                    <input type="text" placeholder="username..." id="username"></input>
+                    <br/><br/>
+                    <label for="password">Passord: </label>
+                    <input type="password" placeholder="password..." id="password"></input>
+                    <div class="adoptbutton" onclick="signIn()">Sign In</div>
+                    <div class="adoptbutton" onclick="createAct()">Create Account</div>
+                </div>
+            </div>           
+        </div>
+        <script src="sign-in.js" type="text/javascript" language="javascript"></script>
+    </body>
+</html>

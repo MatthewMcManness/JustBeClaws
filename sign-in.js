@@ -1,3 +1,4 @@
+
 //placeholder vars
 let placeholderUsers = [
     {username: 'admin', password: 'password'},
@@ -11,6 +12,15 @@ let clientUsername = '';
 let clientPassword = '';
 let sessionPHP = '';
 
+//event listener
+if(document.getElementById('sign-in-btn')) {
+    document.getElementById('sign-in-btn').addEventListener('click', (event) => {
+        event.preventDefault();
+        signIn();
+    });
+}
+
+
 //SIGN IN
 const signIn = () => {
     let success = false;
@@ -23,7 +33,11 @@ const signIn = () => {
     document.getElementById('username').value = '';
     document.getElementById('password').value = '';
 
+
     //query database and see if login is correct
+
+    attemptLogin(clientUsername,clientPassword);
+    console.log("helle");
 
     //placeholder
     placeholderUsers.forEach(user => {
@@ -39,34 +53,21 @@ const signIn = () => {
         document.getElementById('failed-login').style.display='block'; 
         clientUsername ="";
     }
+}
 
-    //set session var user to logged in user, blank if no success
-    // if(success) { sessionPHP = `<?php $_SESSION['username']=${clientUsername}?>`}
-    // else sessionPHP = "<?php $_SESSION['username'] =''?>";
-    // document.body.append(sessionPHP);
-
-    //ajax
-    let setSessionUser = (username) => {
-        
+const attemptLogin = async (client_username,client_password) => {
+    let data = {
+        username: client_username,
+        password: client_password
     }
 
-    // (function($) {
-    //     $.fn.setSessionUser = function(username) {
-    //         $.ajax({
-    //             url: 'php-funcs.php',
-    //             type: 'POST',
-    //             data: {username: username},
-    //             success: function(data) {
-    //                 console.log(data);
-    //             }
-    //         });
-    //     }
-    // })(jQuery);
+    console.log('this data: ',data);
 
-    // //setSessionUser(clientUsername);
+    console.log('stringify: ',JSON.stringify(data));
 
-    // $('')
-
-    //redirect
-    //if(success) location.href='homePage.html';
+    await fetch('http://localhost:3000/login', {
+        method: 'POST',
+        headers: {'Content-Type': 'application/json;charset=utf-8'},
+        body: JSON.stringify(data)
+    });
 }

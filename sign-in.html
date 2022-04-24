@@ -13,7 +13,7 @@
             h5 {background-color: #305894; padding: 0px; margin:15px}
             .signInDiv {background-color:#305894; position:relative; top:35%; transform:translateY(-50%);}
             label {background-color: #305894; color:white;}
-            
+            p {background-color: #305894; color:orange; display:none}
         </style>
     </head>
     
@@ -41,13 +41,14 @@
             </div>
             <div class="right">
                 <div class="signInDiv">
+                    <p id='failed-login'>Invalid username or password!</p>
                     <label for="username">Username: </label>
                     <input type="text" placeholder="username..." id="username"></input>
                     <br/><br/>
                     <label for="password">Passord: </label>
                     <input type="password" placeholder="password..." id="password"></input>
-                    <div class="adoptbutton" onclick="signIn()">Sign In</div>
-                    <div class="adoptbutton" onclick="createAct()">Create Account</div>
+                    <div class="adoptbutton" id="sign-in-btn">Sign In</div>
+                    <!-- <div class="adoptbutton" onclick="createAct()">Create Account</div> -->
                 </div>
             </div>           
         </div>

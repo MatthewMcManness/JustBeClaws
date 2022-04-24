@@ -22,7 +22,7 @@ const changeImage = function(indexChange) {
     imageIndex = newIndex;  //set image index
     
     //update image
-    document.getElementByClass('.animal-image').src = imageSources[imageIndex];
+    document.getElementById('animal-image').src = imageSources[imageIndex];
     console.log(imageSources[imageIndex]);
 }
 

@@ -2,7 +2,7 @@
 
 let imageSources = [
     "animals-main-img-placeholder.png",
-    "cat-image-placeholder-2.jpg"
+    "jack.jpg"
 ];
 
 
@@ -22,7 +22,7 @@ const changeImage = function(indexChange) {
     imageIndex = newIndex;  //set image index
     
     //update image
-    document.getElementByClass('.animal-image').src = imageSources[imageIndex];
+    document.getElementById('animal-image').src = imageSources[imageIndex];
     console.log(imageSources[imageIndex]);
 }
 
@@ -45,7 +45,7 @@ const hideArrows = function() {
 const updatePageData = (admin) => {
     //query db for data
 
-    
+
     //set 
     document.getElementById('cat-name').innerText = `Name: ${data[0]}`;
     document.getElementById('cat-age').innerText = `Age: ${data[1]}`;

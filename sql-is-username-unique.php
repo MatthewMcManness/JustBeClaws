@@ -11,9 +11,7 @@
     $result = mysqli_query($conn, $sqlCommand);
 
     // If the query returns nothing, then the username does not already exist
-    if (mysqli_num_rows($result) < 1) {
-        echo true; return;
-    }
+    if (mysqli_num_rows($result) < 1) return true;
 
-    echo false;
+    return false;
 ?>

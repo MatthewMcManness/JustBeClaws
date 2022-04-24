@@ -14,11 +14,11 @@
 
     // If the query returns nothing, then the username and password pair does not exist
     if (mysqli_num_rows($result) < 1) {
-        echo []; return;
+        return [];
     }
 
 
-    echo array('isAdmin' => mysqli_fetch_row($result)[0],
+    return array('isAdmin' => mysqli_fetch_row($result)[0],
                'isAdopter' => mysqli_fetch_row($result)[1],
                'isFoster' => mysqli_fetch_row($result)[2]);
 ?>

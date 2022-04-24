@@ -1,6 +1,9 @@
 let userType = "default";
 
 //*********getUserType function goes here********// 
+//$.post('sql-login-auth.php', {username})
+
+
 let admin = 1;
 let adopter = 1;
 let foster = 1;

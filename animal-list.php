@@ -1,3 +1,7 @@
+<?php
+    include 'sql-conn.php';
+?>
+
 <!DOCTYPE html>
 <html>
     <head>
@@ -6,7 +10,12 @@
         <link rel="icon" href="justBeClawsIcon.png">
         <link rel="stylesheet" href="style.css" type="text/css">
         <script src="customElements.js" type="text/javascript" language="javascript"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+        <script>
+            //jquery code here
+        </script>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        
 
     </head>
     

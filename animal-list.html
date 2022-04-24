@@ -29,7 +29,7 @@
         <div class="content-emphasis">
             <h1>Cats</h1>
 
-            <div class="cardGrid">
+            <div class="cardGrid" id="grid">
                 <div class="card" onclick="location.href='animal-admin.html';">
                     <img src="Cat.jpg" alt="Avatar" class="cardPicture">
                     <h3>Cat Name</h3>
@@ -61,33 +61,30 @@
             </div>
         </div>
 
-        <a class="adoptbutton" href="#modal1">Add Cat</a>
-
+        <a class="adoptbutton" onclick="showModal('modal1')">Add Cat</a>
         <div class="popup" id="modal1">
-            <a class="popup__overlay" href="#"></a>
             <div class="popup__wrapper">
-                <a class="popup__close" href="#">X</a>
+                <span class="popup__close" onclick="hideModal('modal1')">X</span>
                 <div class="modal-header">
                     <h2 class="Modal">Add a Cat</h2>
                 </div>
-                <div class="modal-body">
-                    <p>Name:</p> <input type="text" maxlength="20" placeholder="First Name goes here">
+                <div class="modal-body" id='name-form'>
+                    <p>Name:</p> <input type="text" maxlength="20" placeholder="Name goes here">
                 </div>
                 <div class="modal-body">
-                    <p>birthdate:</p> <input type="date">
+                    <p>birthdate:</p> <input type="date" id='birthdate-form'>
                 </div>
                 <div class="modal-body">
-                    <p>Breed:</p> <select name="breed" id="breed">
+                    <p>Breed:</p> <select name="breed" id="breed-form">
                         <option value="1">Domestic Shorthair</option>
                         <option value="2">Domestic Longhair</option>
                         </select>  
                 </div>
                 <div class="modal-footer">
-                    <input type="button" value="Submit">
+                    <input type="button" value="Submit" onclick="addCat()">
                 </div>
-                    </div>
-                </div>
-
-                
+            </div>
+        </div>    
+        <script src="animal-list.js" type="text/javascript"></script>
     </body>
 </html>

@@ -45,26 +45,6 @@ class siteHeader extends HTMLElement {
                                 </div>  
                             </div>
 
-                                <div class="popup" id="modal1">
-                                    <div class="popup__overlay" href="#">
-                                        <div class="popup__wrapper">
-                                            <a class="popup__close" href="#">X</a>
-                                            <div>
-                                                <h2 class="Modal">Login</h2>
-                                            </div>
-                                            <div class="modal-body">
-                                                <p>First Name:</p> <input type="text" maxlength="20" placeholder="First Name goes here">
-                                            </div>
-                                            <div class="modal-body">
-                                                <p>Last Name:</p> <input type="text" maxlength="20" placeholder="Last Name goes here">
-                                            </div>
-                                            <div class="modal-footer">
-                                                <input type="button" value="Submit">
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-
                                 
             
                                 <div class="popup" id="modal2">
@@ -107,28 +87,6 @@ class siteHeader extends HTMLElement {
                             </div>  
                         </div>
 
-                            <div class="popup" id="modal1">
-                                <div class="popup__overlay" href="#">
-                                    <div class="popup__wrapper">
-                                        <a class="popup__close" href="#">X</a>
-                                        <div>
-                                            <h2 class="Modal">Login</h2>
-                                        </div>
-                                        <div class="modal-body">
-                                            <p>First Name:</p> <input type="text" maxlength="20" placeholder="First Name goes here">
-                                        </div>
-                                        <div class="modal-body">
-                                            <p>Last Name:</p> <input type="text" maxlength="20" placeholder="Last Name goes here">
-                                        </div>
-                                        <div class="modal-footer">
-                                            <input type="button" value="Submit">
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            
-        
                             <div class="popup" id="modal2">
                                 <div class="popup__overlay" href="#">
                                     <div class="popup__wrapper">
@@ -168,29 +126,7 @@ class siteHeader extends HTMLElement {
                                      <img src="JustBeClawsHeaderImage.png" alt="JustBeClaws" class="bannerImage"/>                        
                                 </div>  
                             </div>
-    
-                                <div class="popup" id="modal1">
-                                    <div class="popup__overlay" href="#">
-                                        <div class="popup__wrapper">
-                                            <a class="popup__close" href="#">X</a>
-                                            <div>
-                                                <h2 class="Modal">Login</h2>
-                                            </div>
-                                            <div class="modal-body">
-                                                <p>First Name:</p> <input type="text" maxlength="20" placeholder="First Name goes here">
-                                            </div>
-                                            <div class="modal-body">
-                                                <p>Last Name:</p> <input type="text" maxlength="20" placeholder="Last Name goes here">
-                                            </div>
-                                            <div class="modal-footer">
-                                                <input type="button" value="Submit">
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-    
-                                
-            
+ 
                                 <div class="popup" id="modal2">
                                     <div class="popup__overlay" href="#">
                                         <div class="popup__wrapper">
@@ -231,29 +167,7 @@ class siteHeader extends HTMLElement {
                                      <img src="JustBeClawsHeaderImage.png" alt="JustBeClaws" class="bannerImage"/>                        
                                 </div>  
                             </div>
-    
-                                <div class="popup" id="modal1">
-                                    <div class="popup__overlay" href="#">
-                                        <div class="popup__wrapper">
-                                            <a class="popup__close" href="#">X</a>
-                                            <div>
-                                                <h2 class="Modal">Login</h2>
-                                            </div>
-                                            <div class="modal-body">
-                                                <p>First Name:</p> <input type="text" maxlength="20" placeholder="First Name goes here">
-                                            </div>
-                                            <div class="modal-body">
-                                                <p>Last Name:</p> <input type="text" maxlength="20" placeholder="Last Name goes here">
-                                            </div>
-                                            <div class="modal-footer">
-                                                <input type="button" value="Submit">
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-    
-                                
-            
+
                                 <div class="popup" id="modal2">
                                     <div class="popup__overlay" href="#">
                                         <div class="popup__wrapper">
@@ -294,29 +208,7 @@ class siteHeader extends HTMLElement {
                                      <img src="JustBeClawsHeaderImage.png" alt="JustBeClaws" class="bannerImage"/>                        
                                 </div>  
                             </div>
-    
-                                <div class="popup" id="modal1">
-                                    <div class="popup__overlay" href="#">
-                                        <div class="popup__wrapper">
-                                            <a class="popup__close" href="#">X</a>
-                                            <div>
-                                                <h2 class="Modal">Login</h2>
-                                            </div>
-                                            <div class="modal-body">
-                                                <p>First Name:</p> <input type="text" maxlength="20" placeholder="First Name goes here">
-                                            </div>
-                                            <div class="modal-body">
-                                                <p>Last Name:</p> <input type="text" maxlength="20" placeholder="Last Name goes here">
-                                            </div>
-                                            <div class="modal-footer">
-                                                <input type="button" value="Submit">
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-    
-                                
-            
+ 
                                 <div class="popup" id="modal2">
                                     <div class="popup__overlay" href="#">
                                         <div class="popup__wrapper">

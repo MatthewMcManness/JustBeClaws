@@ -25,7 +25,7 @@ const initializePage = function () {
 
 //Called when the login button is clicked
 const loginButtonHandler = function () {
-
+    
 }
 
 //Called when the forgot password button is clicked

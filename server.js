@@ -1,40 +1,21 @@
 const express = require('express');
-// import 'body-parser';
-// import 'path';
-// import 'mysql';
-// import {commandLineHandler} from './mode.js';
-// const port = '3000';
+const session = require('express-session');
+const cors = require('cors');
 
 const bodyParser = require('body-parser');
 const path = require('path');
 const mysql = require('mysql');
+const { is } = require('express/lib/request');
 const port = '3000';
 
-// MODE SELECT ---------------------------------------------------------------
-
-// COMMAND LINE ARGUEMENTS ---------------------------------------------------
-// let args = process.argv[2];
-// if(process.argv.length > 2) {
-//     switch (val) {
-//         case '-demo':
-//             //runDemoMode();
-//         break;
-//         case '-dedicated':
-//             //runDedicatedMode();
-//             break;
-//         case '':
-
-        
-//         default:
-//             console.log('No mode specified. Running default...');
-//             //runDedicatedMode();
-//     }
-// }
-
+//users
+let users = [{username:'user', password:'password'}];
 
 // SERVER STARTUP ------------------------------------------------------------
 //create express server
 const app = express();
+app.use(cors()); //enables all cors
+app.use(session({secret:'secret key'})); //session middleware
 app.use(express.static(path.join(__dirname,"/")));
 app.use(bodyParser.urlencoded({extended:true}));
 app.use(bodyParser.json());
@@ -52,7 +33,7 @@ app.listen(port, () => {
 //create database connection
 const db = mysql.createConnection({
     host: "35.225.59.171",
-    user: "admin",
+    user: "james",
     password: "0123456789",
     database: "JustBeClaws"
 });
@@ -64,30 +45,46 @@ db.connect((err) => {
 
 })
 
-// db.query('select * from orders', (err, result) => {
-//     if(err) throw err;
-//     console.log(result);
-//     console.log(result[0].name);
-// });
-
 // END Points ----------------------------------------------------------------
+//login
+app.post('/login', (req,res) => {
+
+    //query list of users
+    let sql = 'SELECT username, password FROM Users';
+    let users = [];
+    db.query(sql, (err,result) => {
+        if(err)throw err;
+
+        //compare each user to given credentials
+        result.forEach(user => {
+            if(user.username == req.body.username && user.password == req.body.password) {
+                console.log("LOGGED IN as ",user.username);
+
+                //create session user
+                req.session.user = user;
+
+                //open new page
+                res.redirect('/');
+            }
+        });
+
+        //send fail message
+        //if(!req.session.user) res.send(false);
+       //else res.send(true);
+    });
+});
+
+
 //home
 app.get('/', (req, res) => {
+    console.log('/ called');
     res.sendFile(path.join(__dirname, "/homePage.html"));
-});
 
-/*
-//get full list of orders
-app.get('/order-list', (req, res) => {
-    let sql = 'SELECT * from orders';
-    db.query(sql, (err, result) => {
-        if(err) throw err;
-        console.log(result);
-        console.log(result[0].name);
-        res.send(JSON.stringify(result));
-    }); 
+    //check which user is logged in, if any
+    if(req.session.user) {
+        console.log(req.session.user);
+    }
 });
-*/
 
 //get full list of orders
 app.get('/auth-login', (req, res) => {

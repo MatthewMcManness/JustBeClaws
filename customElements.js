@@ -6,8 +6,7 @@ let foster = 0;
 
 //get session user and user type
 const getSessionData = async() => {
-    let data = {};
-    let something = await fetch('http://localhost:3000/session-data')
+    await fetch('http://localhost:3000/session-data')
         .then(response => response.json())
         .then(data => {
             adopter=data.adopter;
@@ -15,22 +14,11 @@ const getSessionData = async() => {
             admin=data.administrator;
             console.log(adopter,foster,admin);
         })
-
-    
 }
 
 
 
-userType="default";
-if(adopter == 1){
-    userType = "adopter";
-}
-if(foster == 1){
-    userType = "foster";
-}
-if(admin == 1){
-    userType = "admin";
-}
+
 
 // FORMAT header
 const formatHeader = () => {
@@ -48,61 +36,73 @@ const formatHeader = () => {
     bannerImg.src = 'JustBeClawsHeaderImage.png';
     bannerImg.alt = 'JustBeClaws';
     bannerImg.className = 'bannerImage';
-    bannerDiv.appendChild(bannerImg); //append image to div
+    bannerDiv.appendChild(bannerImg); //append imasage to div
 
     //create nav links
     let home = document.createElement('a');
     home.href = 'homePage.html';
     home.text = 'Home';
-    // home.className='topnav';
-    // home.style.display='block';
-    // home.style.display='float:left';
 
     let animalGallery = document.createElement('a');
     animalGallery.href = 'animalsGallery.html';
     animalGallery.text = 'Animals';
-    // animalGallery.className='topnav';
-    // animalGallery.style.display='block';
-    // animalGallery.style.display='float:left';
+
+    let myAnimalGallery = document.createElement('a');
+    myAnimalGallery.href = 'animal-list.html';
+    myAnimalGallery.text = 'My Animals';
+
+    let fosters = document.createElement('a');
+    fosters.href = 'foster-list.html';
+    fosters.text = 'Fosters';
 
     let donate = document.createElement('a');
     donate.href = 'donate.html';
-    donate.text = 'Donate';
-    // donate.className='topnav';
-    // donate.style.display='block';
-    // donate.style.display='float:left';
+    donate.text = 'Donate';  
 
     let signIn = document.createElement('a');
     signIn.href = 'sign-in.html';
     signIn.text = 'Sign In';
-    // signIn.className='topnav';
-    // signIn.style.display='block';
-    // signIn.style.display='float:left';
+
+    let signOut = document.createElement('a');
+    signOut.href = 'sign-out.html';
+    signOut.text = 'Sign Out';
 
     let signUp = document.createElement('a');
     signUp.href = '#modal2';
     signUp.text = 'Sign Up';
-    // signUp.className='topnav';
-    // signUp.style.display='block';
-    // signUp.style.display.float='left'
 
     let js = document.createElement('a');
     js.href = 'javascript:void(0).html';
     js.onclick='myFunction()';
-    // js.className='icon';
-    // js.style.display='block';
-    // js.style.display='float:left';
 
     let bars = document.createElement('i');
     bars.style.src='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css';
     bars.className='fa fa-bars';
     bars.style.float='right';
 
+
+    //get user type and append children
+    getSessionData();
+    console.log(adopter,foster,admin);
+    
+    if(adopter == 1){
+        userType = "adopter";
+    }
+    if(foster == 1){
+        userType = "foster";
+    }
+    if(admin == 1){
+        userType = "admin";
+    }
+
     //append children
     navbarDiv.appendChild(home);
     navbarDiv.appendChild(animalGallery);
+    navbarDiv.appendChild(myAnimalGallery);
+    navbarDiv.appendChild(fosters);
     navbarDiv.appendChild(donate);
     navbarDiv.appendChild(signIn);
+    navbarDiv.appendChild(signOut);
     navbarDiv.appendChild(signUp);
     navbarDiv.appendChild(js);
     js.appendChild(bars);

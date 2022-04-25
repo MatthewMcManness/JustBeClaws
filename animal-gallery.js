@@ -6,10 +6,20 @@ const cats = [
     {name: 'cat a', imgSrc: 'kitten.jpg', id: '0'},
     {name: 'cat b', imgSrc: 'litter.jpg', id: '1'},
     {name: 'cat c', imgSrc: 'Cat.jpg', id: '2'},
-    {name: 'cat d', imgSrc: 'ruby.jpg', id: '3'}
+    {name: 'cat d', imgSrc: '', id: '3'}
 ];
 
-//SHOW HIDE MODAL
+// GO TO CAT PAGE
+const goTo = (id) => {
+    console.log(id);
+
+    const temp = "myAnimalsDetails.html";
+    const url = `https://just-be-claws-448.herokuapp.com/myAnimalDetailsDetail/${id}`; //use this in release
+
+    location.href = url; //use this in release
+    location.href=temp;
+} 
+
 const showModal = (modalId) => {
     document.getElementById(modalId).style.display='block';
 }
@@ -31,18 +41,6 @@ const addCat = () => {
     //hide modal
     document.getElementById('modal5').style.display='none';
 }
-
-// GO TO CAT PAGE
-const goTo = (id) => {
-    console.log(id);
-
-    const temp = "animal-admin.html";
-    const url = `https://just-be-claws-448.herokuapp.com/animal-admin.html/${id}`; //use this in release
-
-    location.href = url; //use this in release
-    location.href=temp;
-} 
-
 //DRAW GRID
 const drawGrid = () => {
 
@@ -63,7 +61,7 @@ const drawGrid = () => {
         image.className = 'cardPicture';
 
         //create header
-        const nameText = document.createElement('h3');
+        const nameText = document.createElement('h3')
         nameText.innerText = cat.name;
 
         //create data

@@ -3,10 +3,10 @@
 
 //placeholders
 const cats = [  
-    {name: 'cat a', imgSrc: 'kitten.jpg', id: '0'},
-    {name: 'cat b', imgSrc: 'litter.jpg', id: '1'},
-    {name: 'cat c', imgSrc: 'Cat.jpg', id: '2'},
-    {name: 'cat d', imgSrc: '', id: '3'}
+    {name: 'Jack', imgSrc: 'jack.jpg', id: '0'},
+    {name: 'Ruby', imgSrc: 'ruby.jpg', id: '1'},
+    {name: 'Havarti', imgSrc: 'Cat.jpg', id: '2'},
+    {name: 'Cat', imgSrc: '', id: '3'}
 ];
 
 // GO TO CAT PAGE
@@ -40,7 +40,7 @@ const drawGrid = () => {
         image.className = 'cardPicture';
 
         //create header
-        const nameText = document.createElement('h3');
+        const nameText = document.createElement('h3')
         nameText.innerText = cat.name;
 
         //create data

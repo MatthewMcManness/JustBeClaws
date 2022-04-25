@@ -313,15 +313,14 @@ h1{
     justify-content: center;
     font-size: large;
 }
-
-a .donate-button {
-    transition-duration: 0.4s;
+a{
+  text-decoration: none;
+}
+.donate-button {
     color: black; 
+    background-color: #f29202;
     border-radius: 12px;
     padding: 5%;
-    text-align: center;
-    text-decoration: none;
-    display: flex;
     font-size: clamp(20px, 4vw, 40px);
     margin-left:auto;
     margin-right:auto;
@@ -329,6 +328,8 @@ a .donate-button {
     margin-bottom: 2%;
     width: 75%;
     justify-content: center;
+    text-decoration: none;
+
   }
 .donate-button:hover {
     background-color: #026EF2;

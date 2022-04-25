@@ -32,147 +32,230 @@ if(admin == 1){
     userType = "admin";
 }
 
-class siteHeader extends HTMLElement {
-    connectedCallback() {   //called when this is appened to document       
-        setHeader();
-        switch(userType) {
-            case "default":
-                        this.innerHTML = `
-                            <div class="topnav" id="myTopnav">
-                                <a  href="homePage.html">Home</a>
-                                <a  href="animalsGallery.html">Animals</a>
-                                <a  href="donate.html">Donate</a>
-                                <a  href="sign-in.html">Login</a>
-                                <a href="#modal2">Sign Up</a>
-                                <a href="javascript:void(0);" class="icon" onclick="myFunction()">
-                                <i class="fa fa-bars"></i>
-                              </a>
-                                <div class="bannerContainer">
-                                     <img src="JustBeClawsHeaderImage.png" alt="JustBeClaws" class="bannerImage"/>                        
-                                </div>  
-                            </div>
+// FORMAT header
+const formatHeader = () => {
+    let header = document.getElementById('site-header');
+    
+    //create navbar div
+    let navbarDiv = document.createElement('div');
+    navbarDiv.className='topnav';
+    navbarDiv.id = 'myTopnav';
+
+    //create banner
+    let bannerDiv = document.createElement('div');
+    bannerDiv.className = 'bannerContainer';
+    let bannerImg = document.createElement('img');
+    bannerImg.src = 'JustBeClawsHeaderImage.png';
+    bannerImg.alt = 'JustBeClaws';
+    bannerImg.className = 'bannerImage';
+    bannerDiv.appendChild(bannerImg); //append image to div
+
+    //create nav links
+    let home = document.createElement('a');
+    home.href = 'homePage.html';
+    home.text = 'Home';
+    // home.className='topnav';
+    // home.style.display='block';
+    // home.style.display='float:left';
+
+    let animalGallery = document.createElement('a');
+    animalGallery.href = 'animalsGallery.html';
+    animalGallery.text = 'Animals';
+    // animalGallery.className='topnav';
+    // animalGallery.style.display='block';
+    // animalGallery.style.display='float:left';
+
+    let donate = document.createElement('a');
+    donate.href = 'donate.html';
+    donate.text = 'Donate';
+    // donate.className='topnav';
+    // donate.style.display='block';
+    // donate.style.display='float:left';
+
+    let signIn = document.createElement('a');
+    signIn.href = 'sign-in.html';
+    signIn.text = 'Sign In';
+    // signIn.className='topnav';
+    // signIn.style.display='block';
+    // signIn.style.display='float:left';
+
+    let signUp = document.createElement('a');
+    signUp.href = '#modal2';
+    signUp.text = 'Sign Up';
+    // signUp.className='topnav';
+    // signUp.style.display='block';
+    // signUp.style.display.float='left'
+
+    let js = document.createElement('a');
+    js.href = 'javascript:void(0).html';
+    js.onclick='myFunction()';
+    // js.className='icon';
+    // js.style.display='block';
+    // js.style.display='float:left';
+
+    let bars = document.createElement('i');
+    bars.style.src='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css';
+    bars.className='fa fa-bars';
+    bars.style.float='right';
+
+    //append children
+    navbarDiv.appendChild(home);
+    navbarDiv.appendChild(animalGallery);
+    navbarDiv.appendChild(donate);
+    navbarDiv.appendChild(signIn);
+    navbarDiv.appendChild(signUp);
+    navbarDiv.appendChild(js);
+    js.appendChild(bars);
+    navbarDiv.appendChild(bannerDiv);
+
+    header.appendChild(navbarDiv);
+}
+
+
+formatHeader();
+
+
+// class siteHeader extends HTMLElement {
+//     connectedCallback() {   //called when this is appened to document       
+//         setHeader();
+//         switch(userType) {
+//             case "default":
+//                         this.innerHTML = `
+//                             <div class="topnav" id="myTopnav">
+//                                 <a  href="homePage.html">Home</a>
+//                                 <a  href="animalsGallery.html">Animals</a>
+//                                 <a  href="donate.html">Donate</a>
+//                                 <a  href="sign-in.html">Login</a>
+//                                 <a href="#modal2">Sign Up</a>
+//                                 <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+//                                 <i class="fa fa-bars"></i>
+//                               </a>
+//                                 <div class="bannerContainer">
+//                                      <img src="JustBeClawsHeaderImage.png" alt="JustBeClaws" class="bannerImage"/>                        
+//                                 </div>  
+//                             </div>
                                 
             
-                                <div class="popup" id="modal2">
-                                    <div class="popup__overlay" href="#">
-                                        <div class="popup__wrapper">
-                                            <a class="popup__close" href="#">X</a>
-                                            <div>
-                                                <h2 class="Modal">Sign Up</h2>
-                                            </div>
-                                            <div class="modal-body">
-                                                <p>Username:</p> <input type="text" maxlength="20">
-                                            </div>
-                                            <div class="modal-body">
-                                                <p>Password:</p> <input type="text" maxlength="20">
-                                            </div>
-                                            <div class="modal-body">
-                                                <p>Confirm your Password:</p> <input type="text" maxlength="20">
-                                            </div>
-                                            <div class="modal-footer">
-                                                <input type="button" value="Submit">
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                        `;
+//                                 <div class="popup" id="modal2">
+//                                     <div class="popup__overlay" href="#">
+//                                         <div class="popup__wrapper">
+//                                             <a class="popup__close" href="#">X</a>
+//                                             <div>
+//                                                 <h2 class="Modal">Sign Up</h2>
+//                                             </div>
+//                                             <div class="modal-body">
+//                                                 <p>Username:</p> <input type="text" maxlength="20">
+//                                             </div>
+//                                             <div class="modal-body">
+//                                                 <p>Password:</p> <input type="text" maxlength="20">
+//                                             </div>
+//                                             <div class="modal-body">
+//                                                 <p>Confirm your Password:</p> <input type="text" maxlength="20">
+//                                             </div>
+//                                             <div class="modal-footer">
+//                                                 <input type="button" value="Submit">
+//                                             </div>
+//                                         </div>
+//                                     </div>
+//                                 </div>
+//                         `;
                     
-            break;
-            case "adopter":
-                //adopter
+//             break;
+//             case "adopter":
+//                 //adopter
         
-                        this.innerHTML = `
+//                         this.innerHTML = `
              
-                            <div class="topnav" id="myTopnav">
-                                <a  href="homePage.html">Home</a>
-                                <a  href="animalsGallery.html">Animals</a>
-                                <a  href="donate.html">Donate</a>
-                                <b>Signed in as Adopter</b>
-                                <a  href="homePage.html">Logout</a>
-                                <a href="javascript:void(0);" class="icon" onclick="myFunction()">
-                                <i class="fa fa-bars"></i>
-                              </a>
-                                <div class="bannerContainer">
-                                     <img src="JustBeClawsHeaderImage.png" alt="JustBeClaws" class="bannerImage"/>                        
-                                </div>  
-                            </div>
-                         `;
+//                             <div class="topnav" id="myTopnav">
+//                                 <a  href="homePage.html">Home</a>
+//                                 <a  href="animalsGallery.html">Animals</a>
+//                                 <a  href="donate.html">Donate</a>
+//                                 <b>Signed in as Adopter</b>
+//                                 <a  href="homePage.html">Logout</a>
+//                                 <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+//                                 <i class="fa fa-bars"></i>
+//                               </a>
+//                                 <div class="bannerContainer">
+//                                      <img src="JustBeClawsHeaderImage.png" alt="JustBeClaws" class="bannerImage"/>                        
+//                                 </div>  
+//                             </div>
+//                          `;
                            
-                break;
-                case "foster":
-                    //foster
+//                 break;
+//                 case "foster":
+//                     //foster
                   
-                            this.innerHTML = `                  
+//                             this.innerHTML = `                  
                             
-                                <div class="topnav" id="myTopnav">
-                                    <a  href="homePage.html">Home</a>
-                                    <a  href="animalsGallery.html">All Animals</a>
-                                    <a href="myAnimalsGallery.html">My Animals</a>
-                                    <a  href="donate.html">Donate</a>
-                                    <b>Signed in as Foster</b>
-                                    <a  href="homePage.html">Logout</a>
-                                    <a href="javascript:void(0);" class="icon" onclick="myFunction()">
-                                <i class="fa fa-bars"></i>
-                              </a>
-                                <div class="bannerContainer">
-                                     <img src="JustBeClawsHeaderImage.png" alt="JustBeClaws" class="bannerImage"/>                        
-                                </div>  
-                                </div>
-                            `;
+//                                 <div class="topnav" id="myTopnav">
+//                                     <a  href="homePage.html">Home</a>
+//                                     <a  href="animalsGallery.html">All Animals</a>
+//                                     <a href="myAnimalsGallery.html">My Animals</a>
+//                                     <a  href="donate.html">Donate</a>
+//                                     <b>Signed in as Foster</b>
+//                                     <a  href="homePage.html">Logout</a>
+//                                     <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+//                                 <i class="fa fa-bars"></i>
+//                               </a>
+//                                 <div class="bannerContainer">
+//                                      <img src="JustBeClawsHeaderImage.png" alt="JustBeClaws" class="bannerImage"/>                        
+//                                 </div>  
+//                                 </div>
+//                             `;
            
-                break;
-            case "admin":
-                //administrator
+//                 break;
+//             case "admin":
+//                 //administrator
                
-                        this.innerHTML = `
-                            <div>
-                                <img src="JustBeClawsHeaderImage.png" style="width:50%; height:auto; display:block; margin-left:auto; margin-right:auto"/>                             
-                           </div>                        
+//                         this.innerHTML = `
+//                             <div>
+//                                 <img src="JustBeClawsHeaderImage.png" style="width:50%; height:auto; display:block; margin-left:auto; margin-right:auto"/>                             
+//                            </div>                        
                                
-                           <div class="topnav" id="myTopnav">
-                                <a  href="homePage.html">Home</a>
-                                <a  href="animal-list.html">Animals</a>
-                                <a href="myAnimalsGallery.html">My Animals</a>
-                                <a href="foster-list.html">Fosters</a>
+//                            <div class="topnav" id="myTopnav">
+//                                 <a  href="homePage.html">Home</a>
+//                                 <a  href="animal-list.html">Animals</a>
+//                                 <a href="myAnimalsGallery.html">My Animals</a>
+//                                 <a href="foster-list.html">Fosters</a>
                                 
-                                <a  href="donate.html">Donate</a>
-                                <b>Signed in as Administrator</b>
-                                <a  href="homePage.html">Logout</a>
-                                <a href="javascript:void(0);" class="icon" onclick="myFunction()">
-                                <i class="fa fa-bars"></i>
-                              </a>
-                                <div class="bannerContainer">
-                                     <img src="JustBeClawsHeaderImage.png" alt="JustBeClaws" class="bannerImage"/>                        
-                                </div>   
-                            </div>
-                        `;
+//                                 <a  href="donate.html">Donate</a>
+//                                 <b>Signed in as Administrator</b>
+//                                 <a  href="homePage.html">Logout</a>
+//                                 <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+//                                 <i class="fa fa-bars"></i>
+//                               </a>
+//                                 <div class="bannerContainer">
+//                                      <img src="JustBeClawsHeaderImage.png" alt="JustBeClaws" class="bannerImage"/>                        
+//                                 </div>   
+//                             </div>
+//                         `;
                    
-        }
+//         }
     
     
     
     
-    }
-}
+//     }
+// }
 
-const setHeader = async() => {
-    console.log(console.log('settingHeader'));
-    await getSessionData();
+// const setHeader = async() => {
+//     console.log(console.log('settingHeader'));
+//     await getSessionData();
 
-    userType="default";
-    if(adopter == 1){
-        userType = "adopter";
-    }
-    if(foster == 1){
-        userType = "foster";
-    }
-    if(admin == 1){
-        userType = "admin";
-    }
-    console.log('setpageheader',setHeaderHelper());
-    console.log(document.getElementsByClassName('site-header').innerHTML);
-    document.getElementsByTagName('site-header').innerHTML = setHeaderHelper();
-}
+//     userType="default";
+//     if(adopter == 1){
+//         userType = "adopter";
+//     }
+//     if(foster == 1){
+//         userType = "foster";
+//     }
+//     if(admin == 1){
+//         userType = "admin";
+//     }
+//     console.log('setpageheader',setHeaderHelper());
+//     console.log(document.getElementsByClassName('site-header').innerHTML);
+//     document.getElementsByTagName('site-header').innerHTML = setHeaderHelper();
+// }
 
 const setHeaderHelper = () => {
 
@@ -267,8 +350,8 @@ const test = function() {
     console.log("success");
 }
 
-customElements.define('site-header',siteHeader);
+//customElements.define('site-header',siteHeader);
 
 
 
-setHeader();
+//setHeader();

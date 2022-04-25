@@ -33,7 +33,7 @@ app.listen(port, () => {
 //create database connection
 const db = mysql.createConnection({
     host: "35.225.59.171",
-    user: "admin",
+    user: "james",
     password: "0123456789",
     database: "JustBeClaws"
 });

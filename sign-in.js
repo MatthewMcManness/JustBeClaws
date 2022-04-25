@@ -1,3 +1,6 @@
+let loggedIn = false;
+
+
 //placeholder vars
 let placeholderUsers = [
     {username: 'admin', password: 'password'},
@@ -11,9 +14,17 @@ let clientUsername = '';
 let clientPassword = '';
 let sessionPHP = '';
 
+//event listener
+if(document.getElementById('sign-in-btn')) {
+    document.getElementById('sign-in-btn').addEventListener('click', (event) => {
+        event.preventDefault();
+        signIn();
+    });
+}
+
+
 //SIGN IN
 const signIn = () => {
-    let success = false;
 
     //get value of fields
     clientUsername = document.getElementById('username').value;
@@ -23,50 +34,39 @@ const signIn = () => {
     document.getElementById('username').value = '';
     document.getElementById('password').value = '';
 
-    //query database and see if login is correct
 
-    //placeholder
-    placeholderUsers.forEach(user => {
-        if(clientUsername == user.username && clientPassword == user.password) {
-            success = true;
-            console.log("SUCCESS");
-        }
-    });
-   
+    //attempt to login
+    attemptLogin(clientUsername,clientPassword);
+}
 
-    //if incorrect print error message
-    if(!success) {
-        document.getElementById('failed-login').style.display='block'; 
-        clientUsername ="";
+const attemptLogin = async (client_username,client_password) => {
+    let data = {
+        username: client_username,
+        password: client_password
     }
 
-    //set session var user to logged in user, blank if no success
-    // if(success) { sessionPHP = `<?php $_SESSION['username']=${clientUsername}?>`}
-    // else sessionPHP = "<?php $_SESSION['username'] =''?>";
-    // document.body.append(sessionPHP);
+    console.log('this data: ',data);
 
-    //ajax
-    let setSessionUser = (username) => {
-        
-    }
+    console.log('stringify: ',JSON.stringify(data));
 
-    // (function($) {
-    //     $.fn.setSessionUser = function(username) {
-    //         $.ajax({
-    //             url: 'php-funcs.php',
-    //             type: 'POST',
-    //             data: {username: username},
-    //             success: function(data) {
-    //                 console.log(data);
-    //             }
-    //         });
-    //     }
-    // })(jQuery);
 
-    // //setSessionUser(clientUsername);
 
-    // $('')
-
-    //redirect
-    //if(success) location.href='homePage.html';
+    await fetch('http://localhost:3000/login', {
+        method: 'POST',
+        headers: {'Content-Type': 'application/json;charset=utf-8'},
+        body: JSON.stringify(data)
+    })
+        .then(response => response.json())
+        .then(data=>{
+            loggedIn=data.success
+            //if incorrect print error message
+            if(!loggedIn) {
+                document.getElementById('failed-login').style.display='block'; 
+                clientUsername ="";
+            } else { //redirect
+                location.href ='/';
+            }
+        });
+    
+    console.log('test', loggedIn);
 }

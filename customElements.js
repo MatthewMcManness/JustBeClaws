@@ -69,6 +69,7 @@ const formatHeader = () => {
 
     let js = document.createElement('a');
     js.href = 'javascript:void(0).html';
+    js.className='icon';
     js.onclick=()=>{
         var x = document.getElementById("myTopnav");
         if (x.className === "topnav") {

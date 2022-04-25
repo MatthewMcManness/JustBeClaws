@@ -74,6 +74,7 @@ const formatHeader = () => {
     let js = document.createElement('a');
     js.href = 'javascript:void(0).html';
     js.onclick='myFunction()';
+    js.className='icon';
 
     let bars = document.createElement('i');
     bars.style.src='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css';

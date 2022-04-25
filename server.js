@@ -61,16 +61,35 @@ app.post('/login', (req,res) => {
                 console.log("LOGGED IN as ",user.username);
 
                 //create session user
-                req.session.user = user;
+                req.session.username = user.username;
 
                 //open new page
                 isLoggedIn = true;
                 
             }
         });
-        
+
         res.json({ success: isLoggedIn});
     });
+});
+
+//gession data
+app.get('/session-data', (req,res)=> {
+    console.log('/session-data called, user: ',req.session.username);
+    if(req.session.username) {
+        //query session user role
+        let sql = `SELECT administrator, adopter, foster FROM Users WHERE username='${req.session.username}'`;
+        db.query(sql, (err,result) => {
+            if(err)throw err;
+            let roles = {
+                adopter: JSON.stringify(result[0].adopter)[25],
+                foster: JSON.stringify(result[0].foster)[25],
+                administrator: JSON.stringify(result[0].administrator)[25]
+            }
+            res.send(roles);
+        });
+    }
+    
 });
 
 
@@ -97,5 +116,3 @@ app.get('/auth-login', (req, res) => {
         res.send(JSON.stringify(result));
     }); 
 });
-
-

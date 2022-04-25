@@ -20,6 +20,27 @@ const goTo = (id) => {
     location.href=temp;
 } 
 
+const showModal = (modalId) => {
+    document.getElementById(modalId).style.display='block';
+}
+const hideModal = (modalId) => {
+    document.getElementById(modalId).style.display='none';
+}
+
+//ADD CAT
+const addCat = () => {
+    //get data from form
+    const name = document.getElementById('name-form').textContent;
+
+    console.log(name);
+
+
+    //make query to db, adding the cat
+
+    
+    //hide modal
+    document.getElementById('modal5').style.display='none';
+}
 //DRAW GRID
 const drawGrid = () => {
 

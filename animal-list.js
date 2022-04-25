@@ -29,7 +29,7 @@ const addCat = () => {
 
     
     //hide modal
-    document.getElementById('modal1').style.display='none';
+    document.getElementById('modal5').style.display='none';
 }
 
 // GO TO CAT PAGE

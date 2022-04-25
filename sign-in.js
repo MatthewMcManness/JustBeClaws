@@ -1,3 +1,5 @@
+let loggedIn = false;
+
 
 //placeholder vars
 let placeholderUsers = [
@@ -23,7 +25,6 @@ if(document.getElementById('sign-in-btn')) {
 
 //SIGN IN
 const signIn = () => {
-    let success = false;
 
     //get value of fields
     clientUsername = document.getElementById('username').value;
@@ -34,15 +35,8 @@ const signIn = () => {
     document.getElementById('password').value = '';
 
 
-    //query database and see if login is correct
-
+    //attempt to login
     attemptLogin(clientUsername,clientPassword);
-    
-    //if incorrect print error message
-    if(true) {
-        document.getElementById('failed-login').style.display='block'; 
-        clientUsername ="";
-    }
 }
 
 const attemptLogin = async (client_username,client_password) => {
@@ -55,9 +49,24 @@ const attemptLogin = async (client_username,client_password) => {
 
     console.log('stringify: ',JSON.stringify(data));
 
-    let response = await fetch('http://localhost:3000/login', {
+
+
+    await fetch('http://localhost:3000/login', {
         method: 'POST',
         headers: {'Content-Type': 'application/json;charset=utf-8'},
         body: JSON.stringify(data)
     })
+        .then(response => response.json())
+        .then(data=>{
+            loggedIn=data.success
+            //if incorrect print error message
+            if(!loggedIn) {
+                document.getElementById('failed-login').style.display='block'; 
+                clientUsername ="";
+            } else { //redirect
+                location.href ='/';
+            }
+        });
+    
+    console.log('test', loggedIn);
 }

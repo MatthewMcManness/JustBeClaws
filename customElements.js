@@ -1,6 +1,6 @@
 let userType = "default";
 
-let admin = 1;
+let admin = 0;
 let adopter = 0;
 let foster = 0;
 
@@ -15,10 +15,6 @@ const getSessionData = async() => {
             console.log(adopter,foster,admin);
         })
 }
-
-
-
-
 
 // FORMAT header
 const formatHeader = () => {
@@ -73,7 +69,14 @@ const formatHeader = () => {
 
     let js = document.createElement('a');
     js.href = 'javascript:void(0).html';
-    js.onclick='myFunction()';
+    js.onclick=()=>{
+        var x = document.getElementById("myTopnav");
+        if (x.className === "topnav") {
+            x.className += " responsive";
+        } else {
+            x.className = "topnav";
+        }
+    };
 
     let bars = document.createElement('i');
     bars.style.src='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css';
@@ -85,30 +88,58 @@ const formatHeader = () => {
     getSessionData();
     console.log(adopter,foster,admin);
     
-    if(adopter == 1){
-        userType = "adopter";
-    }
-    if(foster == 1){
-        userType = "foster";
-    }
-    if(admin == 1){
-        userType = "admin";
-    }
+    if(admin==1) {
+        adopter=0;
+        foster=0;
 
-    //append children
-    navbarDiv.appendChild(home);
-    navbarDiv.appendChild(animalGallery);
-    navbarDiv.appendChild(myAnimalGallery);
-    navbarDiv.appendChild(fosters);
-    navbarDiv.appendChild(donate);
-    navbarDiv.appendChild(signIn);
-    navbarDiv.appendChild(signOut);
-    navbarDiv.appendChild(signUp);
-    navbarDiv.appendChild(js);
-    js.appendChild(bars);
-    navbarDiv.appendChild(bannerDiv);
-
-    header.appendChild(navbarDiv);
+        //append children
+        navbarDiv.appendChild(home);
+        navbarDiv.appendChild(animalGallery);
+        navbarDiv.appendChild(myAnimalGallery);
+        navbarDiv.appendChild(fosters);
+        navbarDiv.appendChild(donate);
+        navbarDiv.appendChild(signOut);
+        navbarDiv.appendChild(signUp);
+        navbarDiv.appendChild(js);
+        js.appendChild(bars);
+        navbarDiv.appendChild(bannerDiv);
+        header.appendChild(navbarDiv);
+    } else if(foster==1){
+        //append children
+        navbarDiv.appendChild(home);
+        navbarDiv.appendChild(animalGallery);
+        navbarDiv.appendChild(myAnimalGallery);
+        navbarDiv.appendChild(donate);
+        navbarDiv.appendChild(signOut);
+        navbarDiv.appendChild(signUp);
+        navbarDiv.appendChild(js);
+        js.appendChild(bars);
+        navbarDiv.appendChild(bannerDiv);
+        header.appendChild(navbarDiv);
+    } else if(adopter==1) {
+        //append children
+        navbarDiv.appendChild(home);
+        navbarDiv.appendChild(animalGallery);
+        navbarDiv.appendChild(donate);
+        navbarDiv.appendChild(signOut);
+        navbarDiv.appendChild(signUp);
+        navbarDiv.appendChild(js);
+        js.appendChild(bars);
+        navbarDiv.appendChild(bannerDiv);
+        header.appendChild(navbarDiv);
+    } else {
+        console.log('other');
+        //append children
+        navbarDiv.appendChild(home);
+        navbarDiv.appendChild(animalGallery);
+        navbarDiv.appendChild(donate);
+        navbarDiv.appendChild(signIn);
+        navbarDiv.appendChild(signUp);
+        navbarDiv.appendChild(js);
+        js.appendChild(bars);
+        navbarDiv.appendChild(bannerDiv);
+        header.appendChild(navbarDiv);
+    }
 }
 
 

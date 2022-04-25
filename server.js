@@ -83,8 +83,8 @@ app.post('/signup', (req,res) => {
 
 app.post('/getCatPicture', (req,res) => {
 
-    // obtain a picture of a cat given its name
-    let sql = `SELECT main_image FROM Animals WHERE name = '${req.body.catName}'`;
+    // obtain a picture of a cat given its id
+    let sql = `SELECT main_image FROM Animals WHERE animal_id = '${req.body.animal_id}'`;
     db.query(sql, (err,result) => {
         if(err)throw err;
 

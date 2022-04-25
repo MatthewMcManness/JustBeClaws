@@ -61,7 +61,7 @@ const formatHeader = async() => {
     signIn.text = 'Sign In';
 
     let signOut = document.createElement('a');
-    signOut.href='http://localhost:3000/sign-out';
+    signOut.href='sign-out';
     signOut.text = 'Sign Out';
 
     let signUp = document.createElement('a');

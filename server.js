@@ -134,15 +134,9 @@ app.get('/', (req, res) => {
     }
 });
 
-//get full list of orders
-app.get('/auth-login', (req, res) => {
-    console.log('hi');
-    let sql = "SELECT administrator, adopter, foster FROM Users WHERE username = '$username' AND password = '$password'";
-    db.query(sql, (err, result) => {
-        
-        if(err) throw err;
-        console.log(result);
-        console.log(result[0].name);
-        res.send(JSON.stringify(result));
-    }); 
+//sign out
+app.get('/sign-out',(req,res) => {
+    req.session.destroy(); //destroy session
+    res.redirect(path.join(__dirname, '/'));
+    
 });

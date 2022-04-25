@@ -15,6 +15,8 @@ const getSessionData = async() => {
         })
 }
 
+
+
 // FORMAT header
 const formatHeader = async() => {
     let header = document.getElementById('site-header');
@@ -59,7 +61,7 @@ const formatHeader = async() => {
     signIn.text = 'Sign In';
 
     let signOut = document.createElement('a');
-    signOut.href = 'sign-out.html';
+    signOut.href='http://localhost:3000/sign-out';
     signOut.text = 'Sign Out';
 
     let signUp = document.createElement('a');

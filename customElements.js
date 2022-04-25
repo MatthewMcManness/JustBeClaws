@@ -124,10 +124,7 @@ class siteHeader extends HTMLElement {
             case "admin":
                 //administrator
                
-                        this.innerHTML = `
-                            <div>
-                                <img src="JustBeClawsHeaderImage.png" style="width:50%; height:auto; display:block; margin-left:auto; margin-right:auto"/>                             
-                           </div>                        
+                        this.innerHTML = `                    
                                
                            <div class="topnav" id="myTopnav">
                                 <a  href="homePage.html">Home</a>

@@ -33,7 +33,7 @@ app.listen(port, () => {
 //create database connection
 const db = mysql.createConnection({
     host: "35.225.59.171",
-    user: "james",
+    user: "admin",
     password: "0123456789",
     database: "JustBeClaws"
 });
@@ -91,6 +91,29 @@ app.get('/session-data', (req,res)=> {
     }
     
 });
+
+app.post('/signup', (req,res) => {
+
+    // inserts a new user into the database. by default they are an adopter
+    let sql = `INSERT INTO Users (username, password, first_name, last_name, logged_in, administrator, adopter)
+                      VALUES ('${req.body.username}', '${req.body.password}', '${req.body.first_name}', '${req.body.last_name}', '1', 0, 1)`;
+    db.query(sql);
+});
+
+app.post('/getCatPicture', (req,res) => {
+
+    // obtain a picture of a cat given its name
+    let sql = `SELECT main_image FROM Animals WHERE name = '${req.body.catName}'`;
+    db.query(sql, (err,result) => {
+        if(err)throw err;
+
+        result.forEach(user => {
+            res.send(JSON.stringify(user.catName));
+        })
+    });
+});
+
+
 
 
 //home

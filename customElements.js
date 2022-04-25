@@ -12,7 +12,6 @@ const getSessionData = async() => {
             adopter=data.adopter;
             foster=data.foster;
             admin=data.administrator;
-            console.log('data',adopter,foster,admin);
         })
 }
 
@@ -87,7 +86,6 @@ const formatHeader = async() => {
 
     //get user type and append children
     await getSessionData();
-    console.log(adopter,foster,admin);
     
     if(admin==1) {
         adopter=0;

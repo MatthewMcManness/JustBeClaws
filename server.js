@@ -38,6 +38,7 @@ const db = mysql.createConnection({
     database: "JustBeClaws"
 });
 
+
 // connect to database
 db.connect((err) => {
     if(err) console.log('Error: ', err.message);

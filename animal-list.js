@@ -2,7 +2,7 @@
 //query for this data
 
 //placeholders
-const cats = [  
+const catData = [  
     {name: 'cat a', imgSrc: 'kitten.jpg', id: '0'},
     {name: 'cat b', imgSrc: 'litter.jpg', id: '1'},
     {name: 'cat c', imgSrc: 'Cat.jpg', id: '2'},
@@ -46,11 +46,11 @@ const goTo = (id) => {
 //DRAW GRID
 const drawGrid = () => {
 
-    //use queried data for each cat, we need the cats name, main image, and id(used for linking to its animal page)
+    //use queried data for each cat, we need the catData name, main image, and id(used for linking to its animal page)
 
 
     //for each cat create a DOM element and append it to the "cardGrid"
-    cats.forEach((cat) => {
+    catData.forEach((cat) => {
         //create div
         const catCard = document.createElement('div');
         catCard.className = 'card';

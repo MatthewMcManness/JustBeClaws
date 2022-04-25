@@ -33,7 +33,7 @@ app.listen(port, () => {
 //create database connection
 const db = mysql.createConnection({
     host: "35.225.59.171",
-    user: "james",
+    user: "admin",
     password: "0123456789",
     database: "JustBeClaws"
 });
@@ -72,6 +72,14 @@ app.post('/login', (req,res) => {
         //if(!req.session.user) res.send(false);
        //else res.send(true);
     });
+});
+
+app.post('/signup', (req,res) => {
+
+    // inserts a new user into the database. by default they are an adopter
+    let sqlCommand = `INSERT INTO Users (username, password, first_name, last_name, logged_in, administrator, adopter)
+                      VALUES ('${req.body.username}', '${req.body.password}', '${req.body.first_name}', '${req.body.last_name}', '1', 0, 1)`;
+    db.query(sqlCommand);
 });
 
 

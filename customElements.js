@@ -1,6 +1,6 @@
 let userType = "default";
 
-let admin = 0;
+let admin = 1;
 let adopter = 0;
 let foster = 0;
 
